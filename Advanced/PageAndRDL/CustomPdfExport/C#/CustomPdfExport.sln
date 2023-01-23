@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2018
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApplication", "TestApplication\TestApplication.csproj", "{1C2AF813-D63C-40B3-AA23-DAEA921C51F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PdfRendering", "PdfRendering\PdfRendering.csproj", "{EB8DF80A-BEB1-4057-882C-D9550C73A8CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AnyCPU = Debug|AnyCPU
+		Release|AnyCPU = Release|AnyCPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C2AF813-D63C-40B3-AA23-DAEA921C51F7}.Debug|AnyCPU.ActiveCfg = Debug|Any CPU
+		{1C2AF813-D63C-40B3-AA23-DAEA921C51F7}.Debug|AnyCPU.Build.0 = Debug|Any CPU
+		{1C2AF813-D63C-40B3-AA23-DAEA921C51F7}.Release|AnyCPU.ActiveCfg = Release|Any CPU
+		{1C2AF813-D63C-40B3-AA23-DAEA921C51F7}.Release|AnyCPU.Build.0 = Release|Any CPU
+		{EB8DF80A-BEB1-4057-882C-D9550C73A8CA}.Debug|AnyCPU.ActiveCfg = Debug|Any CPU
+		{EB8DF80A-BEB1-4057-882C-D9550C73A8CA}.Debug|AnyCPU.Build.0 = Debug|Any CPU
+		{EB8DF80A-BEB1-4057-882C-D9550C73A8CA}.Release|AnyCPU.ActiveCfg = Release|Any CPU
+		{EB8DF80A-BEB1-4057-882C-D9550C73A8CA}.Release|AnyCPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A690F605-53BC-4847-B70B-E4A130BF8594}
+	EndGlobalSection
+EndGlobal

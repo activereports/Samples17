@@ -1,0 +1,45 @@
+﻿@page
+@model CustomPreview.Pages.Index
+
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "ActiveReports Custom Preview";
+}
+
+<head>
+    <link rel="stylesheet" type="text/css" href="@(nameof(CustomPreview)).styles.css">
+</head>
+<body>
+<div id="pagetop">
+    <div id="pagetitlebanner">
+        <h1><a href="Index">ActiveReports Custom Preview</a></h1>
+    </div>
+</div>
+<div id="pagebody">
+    <h2>ActiveReports Custom Preview Options</h2>
+    <!-- Raw Exporting -->
+    <p>
+        <br>
+        The PDF and HTML exports allow developers to manually control exporting by
+        writing a little code in your favorite ASP.NET language.
+    </p>
+    <table>
+        <tr>
+            <th>Filename</th>
+            <th>HTML</th>
+            <th>PDF</th>
+        </tr>
+        @foreach (var file in Model.Files)
+        {
+            <tr>
+                <td>@file</td>
+                <td><a href="@string.Concat("Reports/", file)">HTML</a></td>
+                <td><a href="@string.Concat("Reports/", file, "/pdf")">PDF</a></td>
+            </tr>
+        }
+    </table>
+    <p style="FONT-SIZE: smaller; VERTICAL-ALIGN: sub; FONT-STYLE: italic">See
+        ActiveReports Professional Edition for additional web reporting options under
+        ASP.NET.</p>
+</div>
+</body>

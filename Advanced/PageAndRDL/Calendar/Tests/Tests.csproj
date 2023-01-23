@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Title>GrapeCity ActiveReports Calendar Tests</Title>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Description>ActiveReports Calendar Component Tests</Description>
+    <Copyright>Copyright(c) 2023 GrapeCity, inc</Copyright>
+    <Company>GrapeCity</Company>
+    <Product>GrapeCity ActiveReports Calendar</Product>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+    <RootNamespace>GrapeCity.ActiveReports.Calendar</RootNamespace>
+    <AssemblyName>GrapeCity.ActiveReports.Calendar.Tests</AssemblyName>
+    <TargetFrameworks>net462;net6.0-windows</TargetFrameworks>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <UseWindowsForms>true</UseWindowsForms>
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+    <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <NoWarn>NU1701</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CalendarComponent\CalendarComponent.csproj">
+      <Project>{40126fb0-44ec-4580-ae8f-e10251cc9328}</Project>
+      <Name>CalendarComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CalendarDesigner\CalendarDesigner.csproj">
+      <Project>{b2ea3eb8-6439-493f-88a2-563a1464cdbb}</Project>
+      <Name>CalendarDesigner</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Grapecity.ActiveReports.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Calendar-AppointmentNoText.rdlx" />
+    <None Include="Resources\Calendar-AppointmentWrapping.rdlx" />
+    <None Include="Resources\Calendar-AppointmentWrappingRTL.rdlx" />
+    <None Include="Resources\Calendar-BackgroundColor.rdlx" />
+    <None Include="Resources\Calendar-BadDates.rdlx" />
+    <None Include="Resources\Calendar-Bookmarklink.rdlx" />
+    <None Include="Resources\Calendar-BorderStyle.rdlx" />
+    <None Include="Resources\Calendar-DayStyle.rdlx" />
+    <None Include="Resources\Calendar-Drillthrough.rdlx" />
+    <None Include="Resources\Calendar-DrillthroughWithParameters.rdlx" />
+    <None Include="Resources\Calendar-EventStyles.rdlx" />
+    <None Include="Resources\Calendar-FillerDayStyle.rdlx" />
+    <None Include="Resources\Calendar-Filters.rdlx" />
+    <None Include="Resources\Calendar-FontStyle.rdlx" />
+    <None Include="Resources\Calendar-Format.rdlx" />
+    <None Include="Resources\Calendar-Hyperlink.rdlx" />
+    <None Include="Resources\Calendar-InvalidBorderWidth.rdlx" />
+    <None Include="Resources\Calendar-InvalidBorderWidthExpression.rdlx" />
+    <None Include="Resources\Calendar-MonthTitle.rdlx" />
+    <None Include="Resources\Calendar-NoData.rdlx" />
+    <None Include="Resources\Calendar-TextAlign.rdlx" />
+    <None Include="Resources\Calendar-WeekendStyle.rdlx" />
+    <None Include="Resources\Calendar.rdlx" />
+    <None Include="Resources\Calendar_AppointmentDetailGrouping.rdlx" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="NUnit">
+      <Version>2.5.9.10348</Version>
+    </PackageReference>
+    <PackageReference Include="NUnitTestAdapter">
+      <Version>2.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Gcef.Data.DataEngine">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Gcef.Data.ExpressionInfo">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Gcef.Data.VBFunctionLib">
+      <Version>3.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Chart">
+      <Version>17.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Chart.Win">
+      <Version>17.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.DataProviders">
+      <Version>2.1.2</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Document">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Document.Drawing.Gc">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Document.Drawing.Gdi">
+      <Version>4.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Drawing.Gc">
+      <Version>3.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Drawing.Gdi">
+      <Version>3.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Rdl">
+      <Version>3.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Rendering">
+      <Version>3.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Scripting">
+      <Version>3.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Svg">
+      <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports">
+      <Version>17.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Viewer.Common">
+      <Version>17.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Viewer.Win">
+      <Version>17.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.ActiveReports.Design.Win">
+      <Version>17.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.DataVisualization.Chart">
+      <Version>0.4.118</Version>
+    </PackageReference>
+    <PackageReference Include="GrapeCity.Documents.Imaging">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Bcl.AsyncInterfaces">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Buffers">
+      <Version>4.5.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Memory">
+      <Version>4.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.Numerics.Vectors">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encodings.Web">
+      <Version>5.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages">
+      <Version>5.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Json">
+      <Version>5.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.4</Version>
+    </PackageReference>
+    <PackageReference Include="System.ValueTuple">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Resources.Extensions">
+      <Version>5.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+</Project>
