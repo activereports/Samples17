@@ -1,4 +1,6 @@
-﻿using System;
+﻿using GrapeCity.ActiveReports.Design.Advanced;
+using GrapeCity.ActiveReports.Extensibility.Rendering.Components;
+using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -21,7 +23,12 @@ namespace GrapeCity.ActiveReports.Samples.TestDesignerPro
 #elif !NETCOREAPP3_1_OR_GREATER
 			SetProcessDpiAwareness(_Process_DPI_Awareness.Process_DPI_Unaware);
 #endif
-			Application.Run(new DesignerForm());
+			string reportName = "DemoReport.rdlx";
+			DesignerForm df = new DesignerForm();
+			df.SessionSettingsStorage = new SessionSettingsStorage();
+			df.ExportViewerFactory = new ExportViewerFactory();
+			df.LoadReport(reportName);
+			Application.Run(df);
 		}
 
 #if !NETCOREAPP3_1_OR_GREATER

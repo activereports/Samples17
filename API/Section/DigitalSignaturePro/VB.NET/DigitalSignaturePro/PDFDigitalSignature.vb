@@ -7,15 +7,13 @@ Imports System.Text
 Imports GrapeCity.ActiveReports
 
 Public Class PDFDigitalSignature
-	Private _resource As ResourceManager
 	Public Sub New()
-		_resource = New ResourceManager([GetType]())
 		Encoding.RegisterProvider(CodePagesEncodingProvider.Instance)
 		InitializeComponent()
 	End Sub
 
 	Private Sub PDFDigitalSignature_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-		'Set the default for in the 'Signature Format' combo box.
+		' Set the default for in the 'Signature Format' combo box.
 		cmbVisibilityType.SelectedIndex = 3
 
 		arvMain.LoadDocument("..//..//..//Report//Invoice.rpx")
@@ -28,7 +26,7 @@ Public Class PDFDigitalSignature
 		Dim tempPath As String = String.Empty
 		' Display the save dialog.
 
-		sfd.Title = _resource.GetString("Title")
+		sfd.Title = Me.Text
 		'Title 
 		sfd.FileName = "DigitalSignature.pdf"
 		' Name of the file for initial display
@@ -42,6 +40,10 @@ Public Class PDFDigitalSignature
 			' Change the cursor.
 			Cursor = Cursors.WaitCursor
 			Application.DoEvents()
+			
+			' PAdES format
+			oPDFExport.Signature.SignatureFormat = SignatureFormat.ETSI_CAdES_detached
+			oPDFExport.Signature.SignatureDigestAlgorithm = SignatureDigestAlgorithm.SHA256				
 
 			' Sets the type of signature.
 			oPDFExport.Signature.VisibilityType = CType(cmbVisibilityType.SelectedIndex, VisibilityType)
@@ -52,9 +54,7 @@ Public Class PDFDigitalSignature
 			' Sets the character position of the signature text
 			oPDFExport.Signature.Stamp.TextAlignment = Alignment.Left
 
-			If Not String.IsNullOrEmpty(_resource.GetString("Font")) Then
-				oPDFExport.Signature.Stamp.Font = New Document.Drawing.Font(_resource.GetString("Font"), 9.0F)
-			End If
+			oPDFExport.Signature.Stamp.Font = New Document.Drawing.Font("Courier New", 10)
 
 			' Set the rectangle in which the text is placed in the area that displays the signature.
 			'  The coordinate specified in this property starts with the top left point, relative to the rectangular signature.
@@ -74,9 +74,7 @@ Public Class PDFDigitalSignature
 
 			' Sets the password for the certificate and digital signature.
 			' For X509Certificate2 class, etc. Please refer to the site of Microsoft.
-			' 　[X509Certificate2 クラス(System.Security.Cryptography.X509Certificates)]
-			' 　http://msdn.microsoft.com/ja-jp/library/system.security.cryptography.x509certificates.x509certificate2.aspx
-			oPDFExport.Signature.Certificate = New X509Certificate2(Path.GetFullPath("..//..//..//GrapeCity.pfx"), "password")
+			oPDFExport.Signature.Certificate = New X509Certificate2(Path.GetFullPath("..//..//..//GrapeCity.pfx"), "password", X509KeyStorageFlags.Exportable)
 
 			' 
 			If chkTimeStamp.Checked Then
@@ -84,24 +82,19 @@ Public Class PDFDigitalSignature
 			End If
 
 			' Sets the time stamp.
-			oPDFExport.Signature.SignDate = New SignatureField(Of DateTime)(DateTime.Now, True)
-			' Signing time
-			oPDFExport.Signature.DistinguishedName.Visible = False
-			' Display whether or not the distinguished name
-			oPDFExport.Signature.Contact = New SignatureField(Of String)("activereports.support@grapecity.com", True)
-			' Contact
-			oPDFExport.Signature.Reason = New SignatureField(Of String)(_resource.GetString("ApprovalText"), True)
-			' Reason
+			oPDFExport.Signature.SignDate = New SignatureField(Of DateTime)(DateTime.Now, True) ' Signing time
+			oPDFExport.Signature.DistinguishedName.Visible = False ' Display whether or not the distinguished name
+			oPDFExport.Signature.Contact = New SignatureField(Of String)("activereports.support@grapecity.com", True) ' Contact
+			oPDFExport.Signature.Reason = New SignatureField(Of String)("I agree that is it a sample.", True) ' Reason
 
 			oPDFExport.Signature.Location = New SignatureField(Of String)("Pittsburgh", True)
-			' Location
-			tempPath = Path.GetTempFileName()
 			' Export the file.
-			oPDFExport.Export(arvMain.Document, tempPath)
-			File.Delete(sfd.FileName)
-			File.Move(tempPath, sfd.FileName)
+			if File.Exists(sfd.FileName)
+				File.Delete(sfd.FileName)
+			End If
+			oPDFExport.Export(arvMain.Document, sfd.FileName)
 
-			'Start the output file (Open)
+			' Start the output file (Open)
 			Dim ProcessProperties As New ProcessStartInfo
 			ProcessProperties.CreateNoWindow = True
 			ProcessProperties.UseShellExecute = True

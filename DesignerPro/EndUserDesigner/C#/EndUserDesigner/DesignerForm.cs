@@ -418,8 +418,12 @@ namespace GrapeCity.ActiveReports.Designer.Win
 				case DesignerReportType.Section:
 					return Resources.SaveRpxFilter;
 				case DesignerReportType.Page:
-					return Resources.SaveRdlxFilter;
-				case DesignerReportType.Rdl:
+                    return Resources.SaveRdlxFilter;
+                case DesignerReportType.RdlDashboard:
+					return Resources.SaveRdlxDashboardFilter;
+				case DesignerReportType.RdlMultiSection:
+                    return isMaster ? Resources.SaveRdlxMasterFilter : Resources.SaveRdlxMultiSectionFilter;
+                case DesignerReportType.Rdl:
 					return isMaster ? Resources.SaveRdlxMasterFilter : Resources.SaveRdlFilter;
 				default:
 					return Resources.SaveRpxFilter;
@@ -475,7 +479,8 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		private bool GetIsMaster()
 		{
 			bool isMaster = false;
-			if (arDesigner.ReportType == DesignerReportType.Rdl)
+			if (arDesigner.ReportType == DesignerReportType.Rdl ||
+			    arDesigner.ReportType == DesignerReportType.RdlMultiSection)
 			{
 				var report = (Component) arDesigner.Report;
 				var site = report == null ? null : report.Site;

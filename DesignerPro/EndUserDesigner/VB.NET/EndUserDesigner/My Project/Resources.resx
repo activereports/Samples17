@@ -165,8 +165,14 @@
   <data name="SaveRdlxFilter" xml:space="preserve">
     <value>Page Report Files (*.rdlx)|*.rdlx</value>
   </data>
+  <data name="SaveDashboardFilter" xml:space="preserve">
+    <value>RDL Dashboard Report Files (*.rdlx)|*.rdlx</value>
+  </data>
   <data name="SaveRdlFilter" xml:space="preserve">
     <value>RDL Report Files (*.rdlx)|*.rdlx</value>
+  </data>
+  <data name="SaveRdlxMultiSectionFilter" xml:space="preserve">
+    <value>RDL Multi-Section Report Files (*.rdlx)|*.rdlx</value>
   </data>
   <data name="TitleFormat" xml:space="preserve">
     <value>{0}{1} - {2}</value>

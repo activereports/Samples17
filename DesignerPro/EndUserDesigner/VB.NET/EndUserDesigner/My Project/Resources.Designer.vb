@@ -435,6 +435,22 @@ Namespace My.Resources
                 Return ResourceManager.GetString("SaveRdlxFilter", resourceCulture)
             End Get
         End Property
+
+        '''<summary>
+        '''</summary>
+        Friend ReadOnly Property SaveDashboardFilter() As String
+            Get
+                Return ResourceManager.GetString("SaveDashboardFilter", resourceCulture)
+            End Get
+        End Property
+
+        '''<summary>
+        '''</summary>
+        Friend ReadOnly Property SaveRdlxMultiSectionFilter() As String
+            Get
+                Return ResourceManager.GetString("SaveRdlxMultiSectionFilter", resourceCulture)
+            End Get
+        End Property
         
         '''<summary>
         '''  Looks up a localized string similar to RDL Report Master Files (*.rdlx-master)|*.rdlx-master.

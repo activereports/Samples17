@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Diagnostics;
+using System.Windows.Forms;
 
 namespace GrapeCity.ActiveReports.Samples.TestDesignerPro
 {
@@ -11,7 +12,7 @@ namespace GrapeCity.ActiveReports.Samples.TestDesignerPro
 
 		private void rtfHelp_LinkClicked(object sender, LinkClickedEventArgs e)
 		{
-			System.Diagnostics.Process.Start(e.LinkText);
+			Process.Start(new ProcessStartInfo {FileName = e.LinkText, UseShellExecute = true});
 		}
 
 		private void HelperForm_FormClosing(object sender, FormClosingEventArgs e)

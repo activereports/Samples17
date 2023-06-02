@@ -16,9 +16,10 @@ Public Class RpxPdfPreviewMiddleware
 			Await context.Response.WriteAsync("Invalid filename")
 			Return
 		End If
-		
-		Dim rpt As New SectionReport()
-		Dim filePath = webHostEnvironment.ContentRootPath.Substring(0, webHostEnvironment.ContentRootPath.Length - 1) + filename
+
+        Dim rootpath = If(webHostEnvironment.ContentRootPath.EndsWith("\"), webHostEnvironment.ContentRootPath.Substring(0, webHostEnvironment.ContentRootPath.Length - 1), webHostEnvironment.ContentRootPath)
+        Dim rpt As New SectionReport()
+        Dim filePath = rootpath + filename
         Dim reportsPath As String = Path.GetDirectoryName(filePath)
         rpt.ResourceLocator = New DefaultResourceLocator(New Uri(reportsPath + "/"))
         Dim xtr As New XmlTextReader(filePath)

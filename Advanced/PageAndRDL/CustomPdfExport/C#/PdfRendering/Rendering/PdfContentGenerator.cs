@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
 using System.Numerics;
+using System.Xml;
 using GrapeCity.ActiveReports.Drawing;
 using GrapeCity.ActiveReports.Extensibility.Rendering;
 using GrapeCity.ActiveReports.Rendering.Tools;
 using PdfSharp.Drawing;
 using PdfSharp.Drawing.Layout;
+using Svg;
 
 namespace GrapeCity.ActiveReports.Samples.Export.Rendering.PdfSharp
 {
@@ -74,6 +78,20 @@ namespace GrapeCity.ActiveReports.Samples.Export.Rendering.PdfSharp
 
 		ImageEx IDrawingCanvas.CreateImage(ImageInfo image)
 		{
+			if (image.MimeType == "image/svg+xml")
+			{
+				var pngStream = new MemoryStream();
+				var xmlDoc = new XmlDocument();
+				xmlDoc.Load(image.Stream);
+				var svgDoc = SvgDocument.Open(xmlDoc);
+				var size = svgDoc.GetDimensions();
+				svgDoc.Width = size.Width == 0 ? 300 : size.Width * 2;
+				svgDoc.Height = size.Height == 0 ? 150 : size.Height * 2;
+				using (var svgImage = svgDoc.Draw()) 
+					svgImage.Save(pngStream, ImageFormat.Png);
+				pngStream.Position = 0;
+				image = new ImageInfo(pngStream, "image/png");
+			}
 			var cacheId = Convert.ToBase64String(HashCalculator.ComputeSimpleHash(image.Stream));
 			image.Stream.Position = 0;
 			return new Image(_images.GetPdfImage(cacheId, image.Stream));

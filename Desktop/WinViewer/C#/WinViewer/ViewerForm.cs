@@ -102,9 +102,9 @@ namespace GrapeCity.ActiveReports.Viewer.Win
 		{
 			if (viewer.Document != null)
 				return ExportForm.ReportType.Section;
-			if (viewer.IsFplDocumentOpened())
-				return ExportForm.ReportType.PageFpl;
-			return ExportForm.ReportType.PageCpl;
+			return viewer.OpenedReport == GrapeCity.Viewer.Common.ViewModel.OpenedReport.Fpl
+				? ExportForm.ReportType.PageFpl
+				: ExportForm.ReportType.PageCpl;
 		}
 	}
 }

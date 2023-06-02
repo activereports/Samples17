@@ -16,9 +16,12 @@ public class RpxPdfPreviewMiddleware
 			await context.Response.WriteAsync("Invalid filename");
 			return;
 		}
-		
-		var rpt = new SectionReport();
-		var filePath = webHostEnvironment.ContentRootPath[..^1] + filename;
+
+        var rootpath = webHostEnvironment.ContentRootPath.EndsWith("\\") ?
+			webHostEnvironment.ContentRootPath[..^1] : webHostEnvironment.ContentRootPath;
+
+        var rpt = new SectionReport();
+		var filePath = rootpath + filename;
 		var reportsPath = Path.GetDirectoryName(filePath);
 		rpt.ResourceLocator = new DefaultResourceLocator(new Uri(reportsPath + @"\"));
 		var xtr = new System.Xml.XmlTextReader(filePath);

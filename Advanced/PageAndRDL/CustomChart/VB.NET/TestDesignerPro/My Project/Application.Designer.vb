@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.GrapeCity.ActiveReports.Samples.Radar.DesignerForm
+            Me.MainForm = Global.GrapeCity.ActiveReports.Samples.Radar.StartForm
         End Sub
     End Class
 End Namespace

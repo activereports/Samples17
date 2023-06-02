@@ -5,6 +5,7 @@ Imports System.ComponentModel
 Imports System.Text
 Imports WinViewer.GrapeCity.ActiveReports.Viewer.Helper
 Imports WinViewer.GrapeCity.ActiveReports.Win.Export
+Imports GrapeCity.Viewer.Common.ViewModel
 
 Partial Friend Class ViewerForm
 	Inherits Form
@@ -91,9 +92,8 @@ Partial Friend Class ViewerForm
 		If viewer.Document IsNot Nothing Then
 			Return ExportForm.ReportType.Section
 		End If
-		If viewer.IsFplDocumentOpened() Then
-			Return ExportForm.ReportType.PageFpl
-		End If
-		Return ExportForm.ReportType.PageCpl
+		Return If(viewer.OpenedReport = OpenedReport.Fpl,
+			ExportForm.ReportType.PageFpl,
+			ExportForm.ReportType.PageCpl)
 	End Function
 End Class

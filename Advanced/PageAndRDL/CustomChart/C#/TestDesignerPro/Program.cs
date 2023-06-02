@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GrapeCity.ActiveReports.Design.Advanced;
+using System;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Forms;
@@ -21,7 +22,12 @@ namespace GrapeCity.ActiveReports.Samples.Radar
 #elif !NETCOREAPP3_1_OR_GREATER
 			SetProcessDpiAwareness(_Process_DPI_Awareness.Process_DPI_Unaware);
 #endif
-			Application.Run(new DesignerForm());
+			string _reportName = @"..\..\..\..\..\Report\Radar.rdlx";
+			DesignerForm df = new DesignerForm();
+			df.SessionSettingsStorage = new SessionSettingsStorage();
+			df.ExportViewerFactory = new ExportViewerFactory();
+			df.LoadReport(_reportName);
+			Application.Run(df);
 		}
 
 #if !NETCOREAPP3_1_OR_GREATER

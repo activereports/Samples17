@@ -35,8 +35,10 @@ public class RpxHandlerMiddleware
 			}
 			return;
 		}
-		
-		var rpxFile = webHostEnvironment.ContentRootPath[..^1] + context.Request.Path.Value;
+		var rootpath = webHostEnvironment.ContentRootPath.EndsWith("\\") ? 
+			webHostEnvironment.ContentRootPath[..^1] : webHostEnvironment.ContentRootPath;
+
+        var rpxFile = rootpath + context.Request.Path.Value;
 		var htmlHandler = new HtmlOutputHandler(cache, Path.GetFileNameWithoutExtension(rpxFile));
 		context.Response.ContentType = "text/html";
 		

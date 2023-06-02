@@ -37,8 +37,9 @@ Public Class RpxHandlerMiddleware
             End If
             Return
         End If
-        
-        Dim rpxFile As String = webHostEnvironment.ContentRootPath.Substring(0, webHostEnvironment.ContentRootPath.Length - 1) + context.Request.Path.Value
+
+        Dim rootpath = If(webHostEnvironment.ContentRootPath.EndsWith("\"), webHostEnvironment.ContentRootPath.Substring(0, webHostEnvironment.ContentRootPath.Length - 1), webHostEnvironment.ContentRootPath)
+        Dim rpxFile As String = rootpath + context.Request.Path.Value
         Dim htmlHandler = New HtmlOutputHandler(cache, Path.GetFileNameWithoutExtension(rpxFile))
         Dim reportException As String = Nothing
         

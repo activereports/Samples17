@@ -5,6 +5,10 @@ Imports GrapeCity.ActiveReports.Drawing
 Imports System.Numerics
 Imports System.Drawing
 Imports PdfSharp.Drawing.Layout
+Imports System.IO
+Imports System.Xml
+Imports Svg
+Imports System.Drawing.Imaging
 
 Partial Friend NotInheritable Class PdfContentGenerator
 	Implements IDrawingCanvas
@@ -63,11 +67,26 @@ Partial Friend NotInheritable Class PdfContentGenerator
 	End Function
 
 	Function CreateImage(image As ImageInfo) As ImageEx Implements IDrawingCanvas.CreateImage
+		If image.MimeType = "image/svg+xml" Then
+			Dim pngStream = New MemoryStream()
+			Dim xmlDoc = New XmlDocument()
+			xmlDoc.Load(image.Stream)
+			Dim svgDoc = SvgDocument.Open(xmlDoc)
+			Dim size = svgDoc.GetDimensions()
+			svgDoc.Width = If(size.Width = 0, 300, size.Width * 2)
+			svgDoc.Height = If(size.Height = 0, 150, size.Height * 2)
+			Using svgImage = svgDoc.Draw()
+				svgImage.Save(pngStream, ImageFormat.Png)
+			End Using
+			pngStream.Position = 0
+			image = New ImageInfo(pngStream, "image/png")
+		End If
 		Dim cacheId = Convert.ToBase64String(HashCalculator.ComputeSimpleHash(image.Stream))
 		image.Stream.Position = 0
 		Return New Image(_images.GetPdfImage(cacheId, image.Stream))
 	End Function
 
+	<Obsolete>
 	Function CreateImage(image As ImageInfo, cacheId As String) As ImageEx Implements IDrawingCanvas.CreateImage
 		Return New Image(_images.GetPdfImage(cacheId, image.Stream))
 	End Function

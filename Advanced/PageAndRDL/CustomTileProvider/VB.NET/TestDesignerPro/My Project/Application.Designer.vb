@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.GrapeCity.ActiveReports.Samples.TestDesignerPro.DesignerForm
+            Me.MainForm = Global.GrapeCity.ActiveReports.Samples.TestDesignerPro.StartForm
         End Sub
     End Class
 End Namespace

@@ -31,7 +31,7 @@ namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 		{
 			var url = string.Format(UrlTemplate, key.LevelOfDetail, key.Col, key.Row);
 			var timeout = !string.IsNullOrEmpty(Settings["Timeout"]) ? int.Parse(Settings["Timeout"]) : -1;
-			string userAgent = $"ActiveReports Core {GetType().Assembly.GetName().Version} contact activereports.sales@grapecity.com";
+			string userAgent = $"ActiveReports.Core/{GetType().Assembly.GetName().Version}";
 
 			WebRequestHelper.DownloadDataAsync(url, timeout, (stream, contentType) => success(new MapTile(key, new ImageInfo(stream, contentType))), error, userAgent);
 		}

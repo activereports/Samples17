@@ -1,4 +1,5 @@
-﻿Imports GrapeCity.ActiveReports.Export.Pdf.Section
+﻿Imports System.Globalization
+Imports GrapeCity.ActiveReports.Export.Pdf.Section
 Imports GrapeCity.ActiveReports.Export.Pdf.Section.Signing
 Imports System.IO
 Imports System.Resources
@@ -6,7 +7,6 @@ Imports System.Text
 Imports GrapeCity.ActiveReports.Document
 
 Public Class PDFDigitalSignature
-	Private _resource As ResourceManager
 	Private _pageDocument As PageDocument
 	
 	Public Sub New()
@@ -17,7 +17,6 @@ Public Class PDFDigitalSignature
 	Private Sub PDFDigitalSignature_Load(ByVal sender As System.Object, ByVal e As EventArgs) Handles MyBase.Load
 		' Set the default state of the combo "format of the signature"
 		cmbVisibilityType.SelectedIndex = 3
-		_resource = New ResourceManager(Me.GetType)
 		Dim PageReport = New PageReport()
 		_pageDocument = PageReport.Document
 		PageReport.Load(New FileInfo("..//..//..//..//..//Report//Catalog.rdlx"))
@@ -33,11 +32,9 @@ Public Class PDFDigitalSignature
 		Dim tmpCursor As Cursor = Nothing
 		Dim tempPath As String = String.Empty
 
-		sfd.Title = _resource.GetString("Title")
-		' Title
-		' Name of the file for initial display
-		sfd.FileName = "DigitalSignature.pdf"
-		sfd.Filter = "PDF|*.pdf"           ' Filter
+		sfd.Title = Me.Text ' Title
+		sfd.FileName = "DigitalSignature.pdf" ' Name of the file for initial display
+		sfd.Filter = "PDF|*.pdf" ' Filter
 		If sfd.ShowDialog() <> DialogResult.OK Then
 			Exit Sub
 		End If
@@ -46,6 +43,10 @@ Public Class PDFDigitalSignature
 			' Change the cursor.
 			Cursor = Cursors.WaitCursor
 			Application.DoEvents()
+			
+			' PAdES format
+			settings.SignatureFormat = SignatureFormat.ETSI_CAdES_detached
+			settings.SignatureDigestAlgorithm = SignatureDigestAlgorithm.SHA256
 
 			' Sets the type of signature.
 			settings.SignatureVisibilityType = CType(cmbVisibilityType.SelectedIndex, VisibilityType)
@@ -56,11 +57,11 @@ Public Class PDFDigitalSignature
 			' Sets the character position of the signature text
 			settings.SignatureStampTextAlignment = Alignment.Left
 
-			settings.SignatureStampFontName = _resource.GetString("Font")
-			settings.SignatureStampFontSize = 9
+			settings.SignatureStampFontName = "Courier New"
+			settings.SignatureStampFontSize = 10
 
 			' Set the rectangle in which the text is placed in the area that displays the signature.
-			'  The coordinate specified in this property starts with the top left point, relative to the rectangular signature.
+			' The coordinate specified in this property starts with the top left point, relative to the rectangular signature.
 			settings.SignatureStampTextRectangle = New RectangleF(1.2F, 0F, 2.8F, 0.93F)
 
 			' Set the signature image.
@@ -75,8 +76,6 @@ Public Class PDFDigitalSignature
 
 			' Sets the password for the certificate and digital signature.
 			' For X509Certificate2 class, etc. Please refer to the site of Microsoft.
-			' 　[X509Certificate2 クラス(System.Security.Cryptography.X509Certificates)]
-			' 　http://msdn.microsoft.com/ja-jp/library/system.security.cryptography.x509certificates.x509certificate2.aspx
 			settings.SignatureCertificateFileName = Path.GetFullPath("..//..//..//certificate.pfx")
 			settings.SignatureCertificatePassword = "test"
 			' 
@@ -85,16 +84,15 @@ Public Class PDFDigitalSignature
 			End If
 
 			' Sets the time stamp.
-			settings.SignatureSignDate = DateTime.Now.ToString()
+			settings.SignatureSignDate = DateTime.Now.ToString(CultureInfo.InvariantCulture)
 			' Signing time
 			settings.SignatureDistinguishedNameVisible = False
 			' Display whether or not the distinguished name
 			settings.SignatureContact = New SignatureField(Of String)("activereports.support@grapecity.com", True)
 			' Contact
-			settings.SignatureReason = _resource.GetString("ApprovalText")
+			settings.SignatureReason = "I agree that is it a sample."
 			' Reason
-
-			settings.SignatureLocation = _resource.GetString("PittsburghText")
+			settings.SignatureLocation = "Pittsburgh"
 			' Location
 			Dim outputDirectory = New DirectoryInfo(Path.GetDirectoryName(sfd.FileName))
 			Dim outputProvider = New Rendering.IO.FileStreamProvider(outputDirectory, sfd.FileName)

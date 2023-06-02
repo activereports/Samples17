@@ -19,7 +19,7 @@ namespace GrapeCity.ActiveReports.Designer.Win {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -139,7 +139,7 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ActiveReports 13.
+        ///   Looks up a localized string similar to ActiveReports.
         /// </summary>
         internal static string DefaultGroup {
             get {
@@ -411,6 +411,15 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RDL Dashboard Report Files (*.rdlx)|*.rdlx.
+        /// </summary>
+        internal static string SaveRdlxDashboardFilter {
+            get {
+                return ResourceManager.GetString("SaveRdlxDashboardFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Page Report Files (*.rdlx)|*.rdlx.
         /// </summary>
         internal static string SaveRdlxFilter {
@@ -425,6 +434,15 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         internal static string SaveRdlxMasterFilter {
             get {
                 return ResourceManager.GetString("SaveRdlxMasterFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to RDL Multi-Section Report Files (*.rdlx)|*.rdlx.
+        /// </summary>
+        internal static string SaveRdlxMultiSectionFilter {
+            get {
+                return ResourceManager.GetString("SaveRdlxMultiSectionFilter", resourceCulture);
             }
         }
         

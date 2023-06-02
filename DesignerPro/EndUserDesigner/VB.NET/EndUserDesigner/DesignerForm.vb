@@ -362,8 +362,12 @@ Public Class DesignerForm
 				Return My.Resources.SaveRpxFilter
 			Case DesignerReportType.Page
 				Return My.Resources.SaveRdlxFilter
+			Case DesignerReportType.RdlDashboard
+				Return My.Resources.SaveDashboardFilter
 			Case DesignerReportType.Rdl
 				Return If(isMaster, My.Resources.SaveRdlxMasterFilter, My.Resources.SaveRdlFilter)
+			Case DesignerReportType.RdlMultiSection
+				Return If(isMaster, My.Resources.SaveRdlxMasterFilter, My.Resources.SaveRdlxMultiSectionFilter)
 			Case Else
 				Return My.Resources.SaveRpxFilter
 		End Select
@@ -416,7 +420,7 @@ Public Class DesignerForm
 
 	Private Function GetIsMaster() As Boolean
 		Dim isMaster As Boolean = False
-		If arDesigner.ReportType = DesignerReportType.Rdl Then
+		If arDesigner.ReportType = DesignerReportType.Rdl Or arDesigner.ReportType = DesignerReportType.RdlMultiSection Then
 			Dim report = CType(arDesigner.Report, Component)
 			Dim site = If(IsNothing(report), Nothing, report.Site)
 			If site IsNot Nothing Then

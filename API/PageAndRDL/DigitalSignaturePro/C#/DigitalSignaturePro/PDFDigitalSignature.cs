@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 using System.IO;
 using GrapeCity.ActiveReports.Export.Pdf.Section.Signing;
@@ -12,11 +13,9 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 {
 	public partial class PDFDigitalSignature : Form
 	{
-		private ResourceManager _resource;
 		private PageDocument _pageDocument;
 		public PDFDigitalSignature()
 		{
-			_resource = new ResourceManager(GetType());
 			InitializeComponent();
 		}
 
@@ -39,9 +38,9 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 			Cursor tmpCursor = Cursor;
 			// Display the save dialog.
 			
-			sfd.Title = _resource.GetString("Title");//Title 
-			sfd.FileName = "DigitalSignature.pdf";	  // Name of the file for initial display
-			sfd.Filter = "PDF|*.pdf";		  // Filter
+			sfd.Title = this.Text; //Title 
+			sfd.FileName = "DigitalSignature.pdf"; // Name of the file for initial display
+			sfd.Filter = "PDF|*.pdf"; // Filter
 			if (sfd.ShowDialog() != DialogResult.OK)
 			{
 				return;
@@ -53,6 +52,10 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 				Cursor = Cursors.WaitCursor;
 				Application.DoEvents();
 
+				// PAdES format
+				settings.SignatureFormat = SignatureFormat.ETSI_CAdES_detached;
+				settings.SignatureDigestAlgorithm = SignatureDigestAlgorithm.SHA256;
+
 				// Sets the type of signature.
 				settings.SignatureVisibilityType = (VisibilityType)cmbVisibilityType.SelectedIndex;
 
@@ -62,9 +65,8 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 				// Sets the character position of the signature text
 				settings.SignatureStampTextAlignment = Alignment.Left;
 
-				if (!string.IsNullOrEmpty(_resource.GetString("Font")))
-					settings.SignatureStampFontName = _resource.GetString("Font");
-				settings.SignatureStampFontSize = 9;
+				settings.SignatureStampFontName = "Courier New";
+				settings.SignatureStampFontSize = 10;
 
 				// Set the rectangle in which the text is placed in the area that displays the signature.
 				//  The coordinate specified in this property starts with the top left point, relative to the rectangular signature.
@@ -82,8 +84,6 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 
 				// Sets the password for the certificate and digital signature.
 				// For X509Certificate2 class, etc. Please refer to the site of Microsoft.
-				// 　[X509Certificate2 クラス(System.Security.Cryptography.X509Certificates)]
-				// 　http://msdn.microsoft.com/ja-jp/library/system.security.cryptography.x509certificates.x509certificate2.aspx
 				settings.SignatureCertificateFileName = Path.GetFullPath(@"..\..\..\certificate.pfx");
 				settings.SignatureCertificatePassword = "test";
 				// 
@@ -92,24 +92,25 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 					settings.SignatureTimeStamp = new TimeStamp("https://tsa.wotrus.com", "", "");
 				}
 
-				// Sets the time stamp.
-				settings.SignatureSignDate = DateTime.Now.ToString();       // Signing time
-				settings.SignatureDistinguishedNameVisible  = false;                                // Display whether or not the distinguished name
-				settings.SignatureContact = new SignatureField<string>("activereports.support@grapecity.com", true);  // Contact
+				// Sets the time stamp
+				settings.SignatureSignDate = DateTime.Now.ToString(CultureInfo.InvariantCulture); // Signing time
+				settings.SignatureDistinguishedNameVisible  = false; // Display whether or not the distinguished name
+				settings.SignatureContact = new SignatureField<string>("activereports.support@grapecity.com", true); // Contact
 
-				settings.SignatureReason = _resource.GetString("ApprovalText");
 				// Reason
+				settings.SignatureReason = "I agree that is it a sample.";
 
-				settings.SignatureLocation = _resource.GetString("PittsburghText");
 				// Location
+				settings.SignatureLocation = "Pittsburgh";
+
 				var outputDirectory = new DirectoryInfo(Path.GetDirectoryName(sfd.FileName));
 				var outputProvider = new Rendering.IO.FileStreamProvider(outputDirectory, sfd.FileName);
 				outputProvider.OverwriteOutputFile = true;
-
-				// Export the file.
+				
+				// Export the file
 				_pageDocument.Render(pdfRE, outputProvider, settings);
 
-				//Start the output file (Open)
+				// Start the output file (Open)
 				Process.Start(new ProcessStartInfo()
 				{
 					CreateNoWindow = true,

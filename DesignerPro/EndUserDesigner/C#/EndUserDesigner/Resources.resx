@@ -247,4 +247,10 @@
   <data name="SampleNameTitle" xml:space="preserve">
     <value>EndUserDesigner - </value>
   </data>
+  <data name="SaveRdlxDashboardFilter" xml:space="preserve">
+    <value>RDL Dashboard Report Files (*.rdlx)|*.rdlx</value>
+  </data>
+  <data name="SaveRdlxMultiSectionFilter" xml:space="preserve">
+    <value>RDL Multi-Section Report Files (*.rdlx)|*.rdlx</value>
+  </data>
 </root>

@@ -3,11 +3,11 @@ using System.Collections.Specialized;
 using System.Globalization;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Xml;
 using GrapeCity.ActiveReports.Extensibility.Rendering;
 using GrapeCity.ActiveReports.Extensibility.Rendering.Components.Map;
 using GrapeCity.ActiveReports.Samples.CustomTileProviders.Properties;
-using static System.Net.WebRequestMethods;
 
 namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 {
@@ -62,57 +62,78 @@ namespace GrapeCity.ActiveReports.Samples.CustomTileProviders
 
 		private void ValidateApiKey(Parameters parameters, Action success, Action<Exception> error)
 		{
-			var request = WebRequest.Create("http://www.mapquestapi.com/geocoding/v1/reverse?location=0,0&outFormat=xml&key=" + parameters.Key);
-			if (parameters.Timeout > 0)
+			using (var client = new HttpClient())
 			{
-				request.Timeout = parameters.Timeout;
-			}
+				if (parameters.Timeout > 0)
+				{
+					client.Timeout = new TimeSpan(0, 0, 0, 0, parameters.Timeout);
+				}
 
-			request.BeginGetResponse(ar =>
-			{
 				try
 				{
-					var response = request.GetResponse();
-
-					//Copy data from buffer (It must be done, otherwise the buffer overflow and we stop to get repsonses).
-					using (var reader = new StreamReader(response.GetResponseStream()))
+					var task = client.GetAsync("http://www.mapquestapi.com/geocoding/v1/reverse?location=0,0&outFormat=xml&key=" + parameters.Key).ContinueWith((responseTask) =>
 					{
-						var result = reader.ReadToEnd();
-						var doc = new XmlDocument();
-						doc.LoadXml(result);
-						var infoNode = doc.SelectSingleNode("response/info");
-						if (infoNode != null && infoNode["statusCode"] != null)
-						{
-							var statusCode = infoNode["statusCode"].InnerText;
-							if (statusCode == "403")
-							{
-								error(new MapQuestServiceMapsKeyError());
-								return;
-							}
-						}
-					}
+						var response = responseTask.Result;
 
-					success();
+						if(response.StatusCode == HttpStatusCode.Unauthorized ||
+						response.StatusCode == HttpStatusCode.Forbidden)
+						{
+							error(new MapQuestServiceMapsKeyError());
+							return;
+						}
+
+						try
+						{
+							var readTask = response.Content.ReadAsStreamAsync();
+							readTask.Wait();
+
+							//Copy data from buffer (It must be done, otherwise the buffer overflow and we stop to get repsonses).
+							using (var reader = new StreamReader(readTask.Result))
+							{
+								var result = reader.ReadToEnd();
+								var doc = new XmlDocument();
+								doc.LoadXml(result);
+								var infoNode = doc.SelectSingleNode("response/info");
+								if (infoNode != null && infoNode["statusCode"] != null)
+								{
+									var statusCode = infoNode["statusCode"].InnerText;
+									if (statusCode == "403")
+									{
+										error(new MapQuestServiceMapsKeyError());
+										return;
+									}
+								}
+							}
+
+							success();
+						}
+						catch (Exception exception)
+						{
+							var webEx = exception as WebException;
+							if (webEx != null)
+							{
+								if (webEx.Status == WebExceptionStatus.ProtocolError)
+								{
+									var webExResponse = webEx.Response as HttpWebResponse;
+									if (webExResponse != null && webExResponse.StatusCode == HttpStatusCode.Forbidden)
+									{
+										error(new MapQuestServiceMapsKeyError());
+										return;
+									}
+								}
+							}
+
+							error(exception);
+						}
+					});
+
+					task.Wait();
 				}
-				catch (Exception exception)
+				catch(Exception exception)
 				{
-					var webEx = exception as WebException;
-					if (webEx != null)
-					{
-						if (webEx.Status == WebExceptionStatus.ProtocolError)
-						{
-							var response = webEx.Response as HttpWebResponse;
-							if (response != null && response.StatusCode == HttpStatusCode.Forbidden)
-							{
-								error(new MapQuestServiceMapsKeyError());
-								return;
-							}
-						}
-					}
-
 					error(exception);
 				}
-			}, null);
+			}
 		}
 
 		#region Parameters

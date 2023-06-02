@@ -12,16 +12,14 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 {
 	public partial class PDFDigitalSignature : Form
 	{
-		private ResourceManager _resource;
 		public PDFDigitalSignature()
 		{
-			_resource = new ResourceManager(GetType());
 			InitializeComponent();
 		}
 
 		private void PDFDigitalSignature_Load(object sender, EventArgs e)
 		{
-			//Set the default for in the 'Signature Format' combo box.
+			// Set the default for in the 'Signature Format' combo box.
 			cmbVisibilityType.SelectedIndex = 3;
 
 			arvMain.LoadDocument("..//..//..//Report//Invoice.rpx");
@@ -35,9 +33,9 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 			string tempPath = string.Empty;
 			// Display the save dialog.
 			
-			sfd.Title = _resource.GetString("Title");//Title 
-			sfd.FileName = "DigitalSignature.pdf";	  // Name of the file for initial display
-			sfd.Filter = "PDF|*.pdf";		  // Filter
+			sfd.Title = this.Text; // Title 
+			sfd.FileName = "DigitalSignature.pdf"; // Name of the file for initial display
+			sfd.Filter = "PDF|*.pdf"; // Filter
 			if (sfd.ShowDialog() != DialogResult.OK)
 			{
 				return;
@@ -49,6 +47,10 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 				Cursor = Cursors.WaitCursor;
 				Application.DoEvents();
 
+				// PAdES format
+				oPDFExport.Signature.SignatureFormat = SignatureFormat.ETSI_CAdES_detached;
+				oPDFExport.Signature.SignatureDigestAlgorithm = SignatureDigestAlgorithm.SHA256;
+				
 				// Sets the type of signature.
 				oPDFExport.Signature.VisibilityType = (VisibilityType)cmbVisibilityType.SelectedIndex;
 
@@ -58,11 +60,10 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 				// Sets the character position of the signature text
 				oPDFExport.Signature.Stamp.TextAlignment = Alignment.Left;
 
-				if (!string.IsNullOrEmpty(_resource.GetString("Font")))
-					oPDFExport.Signature.Stamp.Font = new Document.Drawing.Font(_resource.GetString("Font"), 9.0F);
+				oPDFExport.Signature.Stamp.Font = new Document.Drawing.Font("Courier New", 9.0F);
 
 				// Set the rectangle in which the text is placed in the area that displays the signature.
-				//  The coordinate specified in this property starts with the top left point, relative to the rectangular signature.
+				// The coordinate specified in this property starts with the top left point, relative to the rectangular signature.
 				oPDFExport.Signature.Stamp.TextRectangle = new RectangleF(1.2F, 0.0F, 2.8F, 0.93F);
 
 				// Set the signature image.
@@ -78,11 +79,8 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 
 				// Sets the password for the certificate and digital signature.
 				// For X509Certificate2 class, etc. Please refer to the site of Microsoft.
-				// 　[X509Certificate2 クラス(System.Security.Cryptography.X509Certificates)]
-				// 　http://msdn.microsoft.com/ja-jp/library/system.security.cryptography.x509certificates.x509certificate2.aspx
-				oPDFExport.Signature.Certificate = new X509Certificate2(Path.GetFullPath("..//..//..//GrapeCity.pfx"), "password");
+				oPDFExport.Signature.Certificate = new X509Certificate2(Path.GetFullPath("..//..//..//GrapeCity.pfx"), "password", X509KeyStorageFlags.Exportable);
 
-				// 
 				if (chkTimeStamp.Checked)
 				{
 					oPDFExport.Signature.TimeStamp = new TimeStamp("https://freetsa.org/tsr", "", "");
@@ -93,18 +91,17 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 				oPDFExport.Signature.DistinguishedName.Visible = false;								 // Display whether or not the distinguished name
 				oPDFExport.Signature.Contact = new SignatureField<string>("activereports.support@grapecity.com", true);  // Contact
 				
-				oPDFExport.Signature.Reason = new SignatureField<string>(_resource.GetString("ApprovalText"), true);
+				oPDFExport.Signature.Reason = new SignatureField<string>("I agree that is it a sample.", true);
 				// Reason
 				
 				oPDFExport.Signature.Location = new SignatureField<string>("Pittsburgh", true);
-				// Location
-				tempPath = Path.GetTempFileName();
+				
 				// Export the file.
-				oPDFExport.Export(arvMain.Document, tempPath);
-				File.Delete(sfd.FileName);
-				File.Move(tempPath, sfd.FileName);
+				if (File.Exists(sfd.FileName))
+					File.Delete(sfd.FileName);
+				oPDFExport.Export(arvMain.Document, sfd.FileName);
 
-				//Start the output file (Open)
+				// Start the output file (Open)
 				Process.Start(new ProcessStartInfo()
 				{
 					CreateNoWindow = true,
@@ -112,7 +109,6 @@ namespace GrapeCity.ActiveReports.Sample.DigitalSignaturePro
 					Verb = "open",
 					FileName = sfd.FileName
 				});
-
 
 				// Display the notification message.
 				MessageBox.Show(Resource.FinishExportMessage, Text, MessageBoxButtons.OK, MessageBoxIcon.Information);

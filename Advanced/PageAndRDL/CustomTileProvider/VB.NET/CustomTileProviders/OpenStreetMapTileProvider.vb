@@ -32,7 +32,7 @@ Public NotInheritable Class OpenStreetMapTileProvider
     Public Sub GetTile(ByVal key As MapTileKey, ByVal success As Action(Of IMapTile), ByVal [error] As Action(Of Exception)) Implements IMapTileProvider.GetTile
         Dim url = String.Format(UrlTemplate, key.LevelOfDetail, key.Col, key.Row)
         Dim timeout = If(Not String.IsNullOrEmpty(Settings("Timeout")), Integer.Parse(Settings("Timeout")), -1)
-        Dim userAgent As String = $"ActiveReports Core {[GetType]().Assembly.GetName().Version} contact activereports.sales@grapecity.com"
+        Dim userAgent As String = $"ActiveReports.Core/{[GetType]().Assembly.GetName().Version}"
 
         WebRequestHelper.DownloadDataAsync(url, timeout, Sub(stream, contentType) success(New MapTile(key, New ImageInfo(stream, contentType))), [error], userAgent)
     End Sub

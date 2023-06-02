@@ -18,7 +18,7 @@
 								<Header>
 									<TableRows>
 										<TableRow>
-											<Height>0.584833in</Height>
+											<Height>0.570142in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
@@ -63,7 +63,7 @@
 								<Details>
 									<TableRows>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
@@ -98,6 +98,7 @@
 																	<Width>1.3035in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -114,6 +115,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>1234ABZ%</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -123,7 +128,7 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
@@ -183,13 +188,79 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>1.153209in</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
+															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
+																<FontFamily>Segoe UI Light</FontFamily>
+																<TextAlign>Center</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>Aztec</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Rectangle Name="Container18">
+															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
+																<FontFamily>Arial</FontFamily>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<ReportItems>
+																<CustomReportItem Name="Barcode19">
+																	<Type>Barcode</Type>
+																	<Top>0.2cm</Top>
+																	<Left>2.2cm</Left>
+																	<Width>4.2cm</Width>
+																	<Height>0.9449in</Height>
+																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
+																		<FontFamily>Courier New</FontFamily>
+																		<FontSize>8pt</FontSize>
+																	</Style>
+																	<CustomProperties>
+																		<CustomProperty>
+																			<Name>DisplayName</Name>
+																			<Value>Barcode</Value>
+																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:Symbology</Name>
+																			<Value>Aztec</Value>
+																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:Value</Name>
+																			<Value>aztec_sample_01536030</Value>
+																		</CustomProperty>
+																	</CustomProperties>
+																</CustomReportItem>
+															</ReportItems>
+														</Rectangle>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+										<TableRow>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCodaBar">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -205,7 +276,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCodaBar">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -234,6 +305,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>A4016B</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -243,13 +318,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode_128_A">
 															<Style>
-																<BackgroundColor>White</BackgroundColor>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -265,7 +340,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode_128_A">
 															<Style>
-																<BackgroundColor>White</BackgroundColor>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -278,6 +353,7 @@
 																	<Width>1.561in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -294,6 +370,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>MOU12DEF</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -303,13 +383,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode_128_B">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -325,7 +405,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode_128_B">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -363,12 +443,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode_128_C">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -384,6 +465,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode_128_C">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -396,6 +478,7 @@
 																	<Width>2.3484in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -412,6 +495,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>1143493</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -421,13 +508,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode_128auto">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -443,7 +530,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode_128auto">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -481,12 +568,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode_2_of_5">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -502,6 +590,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode_2_of_5">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -514,6 +603,7 @@
 																	<Width>0.875in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -530,6 +620,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>3661239</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -539,13 +633,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode_93">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -561,7 +655,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode_93">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -599,12 +693,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode25intlv">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -620,6 +715,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode25intlv">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -632,6 +728,7 @@
 																	<Width>0.875in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -648,6 +745,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>102339221</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -657,13 +758,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode39">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -679,7 +780,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode39">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -716,12 +817,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode39x">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -737,6 +839,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode39x">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -749,6 +852,7 @@
 																	<Width>1.7299in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																	</Style>
 																	<CustomProperties>
@@ -764,6 +868,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>BAR92112234</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -773,13 +881,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.828069in</Height>
+											<Height>0.807275in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode49">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -795,7 +903,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode49">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -833,12 +941,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxCode93x">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -854,6 +963,7 @@
 													<ReportItems>
 														<Rectangle Name="containerCode93x">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -866,6 +976,7 @@
 																	<Width>1.4961in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -882,6 +993,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>CODE349101%</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -891,13 +1006,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>1.182969in</Height>
+											<Height>1.15327in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxDataMatrix">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -913,7 +1028,7 @@
 													<ReportItems>
 														<Rectangle Name="containerDataMatrix">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -942,6 +1057,10 @@
 																			<Name>dd:CaptionLocation</Name>
 																			<Value>None</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -951,12 +1070,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxEAN_13">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -972,6 +1092,7 @@
 													<ReportItems>
 														<Rectangle Name="containerEAN_13">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -984,6 +1105,7 @@
 																	<Width>2in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1000,6 +1122,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>145273620123</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1009,13 +1135,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxEAN_13withAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1031,7 +1157,7 @@
 													<ReportItems>
 														<Rectangle Name="containerEAN_13withAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1085,12 +1211,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxEAN_8">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1106,6 +1233,7 @@
 													<ReportItems>
 														<Rectangle Name="containerEAN_8">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1118,6 +1246,7 @@
 																	<Width>1.0413in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1134,6 +1263,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>298273600426</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1143,13 +1276,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxEAN128FNC1">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1165,7 +1298,7 @@
 													<ReportItems>
 														<Rectangle Name="containerEAN128FNC1">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1203,12 +1336,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxIntelligentMail">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1224,6 +1358,7 @@
 													<ReportItems>
 														<Rectangle Name="containerIntelligentMail">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1236,6 +1371,7 @@
 																	<Width>1.811in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1252,6 +1388,10 @@
 																			<Name>dd:CaptionLocation</Name>
 																			<Value>None</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1261,13 +1401,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.357648in</Height>
+											<Height>0.348657in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxJapanesePostal">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1283,7 +1423,7 @@
 													<ReportItems>
 														<Rectangle Name="containerJapanesePostal">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1321,12 +1461,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxMatrix_2_of_5">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1342,6 +1483,7 @@
 													<ReportItems>
 														<Rectangle Name="containerMatrix_2_of_5">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1354,6 +1496,7 @@
 																	<Width>1.811in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1370,6 +1513,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>790022312</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1379,13 +1526,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxMicroPDF417">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1401,7 +1548,7 @@
 													<ReportItems>
 														<Rectangle Name="containerMicroPDF417">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1440,12 +1587,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>1.157908in</Height>
+											<Height>1.128838in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textBoxMicroQRCode">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1461,6 +1609,7 @@
 													<ReportItems>
 														<Rectangle Name="containerMicroQRCode">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1473,6 +1622,7 @@
 																	<Width>2cm</Width>
 																	<Height>2cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -1485,6 +1635,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>1234567890</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1494,13 +1648,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxMSI">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1516,7 +1670,7 @@
 													<ReportItems>
 														<Rectangle Name="containerMSI">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1555,12 +1709,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.591471in</Height>
+											<Height>0.576613in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxPdf417">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1576,6 +1731,7 @@
 													<ReportItems>
 														<Rectangle Name="containerPdf417">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1588,6 +1744,7 @@
 																	<Width>1.775in</Width>
 																	<Height>0.3937in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1604,6 +1761,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>ABARCD2332322</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1613,13 +1774,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxPostNet">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1635,7 +1796,7 @@
 													<ReportItems>
 														<Rectangle Name="containerPostNet">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1673,12 +1834,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>1.182969in</Height>
+											<Height>1.15327in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxQRCode">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1694,6 +1856,7 @@
 													<ReportItems>
 														<Rectangle Name="containerQRCode">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1706,6 +1869,7 @@
 																	<Width>1in</Width>
 																	<Height>1in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1722,6 +1886,10 @@
 																			<Name>dd:CaptionLocation</Name>
 																			<Value>None</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1731,13 +1899,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRM4SCC">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1753,7 +1921,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRM4SCC">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1791,12 +1959,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSS14">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1812,6 +1981,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSS14">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1824,6 +1994,7 @@
 																	<Width>1.8189in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1840,6 +2011,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>01339382122890</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1849,13 +2024,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSS14Stacked">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1871,7 +2046,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSS14Stacked">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1909,12 +2084,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.828069in</Height>
+											<Height>0.807275in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSS14StackedCCA">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1930,6 +2106,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSS14StackedCCA">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -1942,6 +2119,7 @@
 																	<Width>1.8425in</Width>
 																	<Height>0.6299in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -1967,6 +2145,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>00033938213289</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -1976,13 +2158,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.94637in</Height>
+											<Height>0.922608in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSS14StackedOmnidirectional">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -1998,7 +2180,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSS14StackedOmnidirectional">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2037,12 +2219,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSS14Truncated">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2058,6 +2241,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSS14Truncated">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2070,6 +2254,7 @@
 																	<Width>1.5in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -2086,6 +2271,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>3094438233289</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2095,13 +2284,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSSExpanded">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2117,7 +2306,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSSExpanded">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2155,12 +2344,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSSExpandedStacked">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2176,6 +2366,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSSExpandedStacked">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2188,6 +2379,7 @@
 																	<Width>2.5in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -2204,6 +2396,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>8110100706401002003100110120</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2213,13 +2409,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxRSSLimited">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2235,7 +2431,7 @@
 													<ReportItems>
 														<Rectangle Name="containerRSSLimited">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2273,12 +2469,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textbox39">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2294,6 +2491,7 @@
 													<ReportItems>
 														<Rectangle Name="container37">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2306,6 +2504,7 @@
 																	<Width>1.811in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -2330,6 +2529,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>00656923221</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2339,13 +2542,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUCCEAN128">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2361,7 +2564,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUCCEAN128">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2399,12 +2602,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUPC_A">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2420,6 +2624,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUPC_A">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2432,6 +2637,7 @@
 																	<Width>1.9685in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -2448,6 +2654,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>88008725991</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2457,13 +2667,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUPC_AwithAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2479,7 +2689,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUPC_AwithAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2533,12 +2743,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUPC_E0">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2554,6 +2765,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUPC_E0">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2566,6 +2778,7 @@
 																	<Width>2.125in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -2594,6 +2807,10 @@
 																			<Name>dd:SupplementOptions.SupplementSpacing</Name>
 																			<Value>0.05in</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2603,13 +2820,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUPC_E0withAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2625,7 +2842,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUPC_E0withAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2679,12 +2896,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.70977in</Height>
+											<Height>0.691944in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUPC_E1">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2700,6 +2918,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUPC_E1">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2712,6 +2931,7 @@
 																	<Width>1.5748in</Width>
 																	<Height>0.5in</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Segoe UI Light</FontFamily>
 																		<TextAlign>Center</TextAlign>
 																	</Style>
@@ -2728,6 +2948,10 @@
 																			<Name>dd:Symbology</Name>
 																			<Value>UPC_E1</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2737,13 +2961,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="textboxUPC_E1withAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<TextAlign>Center</TextAlign>
 																<VerticalAlign>Middle</VerticalAlign>
@@ -2759,7 +2983,7 @@
 													<ReportItems>
 														<Rectangle Name="containerUPC_E1withAddonCode">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2813,12 +3037,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox1">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -2841,6 +3066,7 @@
 													<ReportItems>
 														<Rectangle Name="Container8">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2853,6 +3079,7 @@
 																	<Width>7cm</Width>
 																	<Height>1.4783cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -2874,6 +3101,10 @@
 																			<Name>dd:ComputeChecksum</Name>
 																			<Value>true</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2883,13 +3114,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox29">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -2912,7 +3143,7 @@
 													<ReportItems>
 														<Rectangle Name="Container1">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2925,6 +3156,7 @@
 																	<Width>7.0132cm</Width>
 																	<Height>1.5028cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -2946,6 +3178,10 @@
 																			<Name>dd:ComputeChecksum</Name>
 																			<Value>true</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -2955,12 +3191,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox27">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -2984,6 +3221,7 @@
 													<ReportItems>
 														<Rectangle Name="Container9">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -2996,6 +3234,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.4542cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3017,6 +3256,10 @@
 																			<Name>dd:ComputeChecksum</Name>
 																			<Value>true</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3026,13 +3269,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox25">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3055,7 +3298,7 @@
 													<ReportItems>
 														<Rectangle Name="Container2">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3068,6 +3311,7 @@
 																	<Width>7.0938cm</Width>
 																	<Height>1.4783cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3089,6 +3333,10 @@
 																			<Name>dd:ComputeChecksum</Name>
 																			<Value>true</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3098,12 +3346,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox23">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3126,6 +3375,7 @@
 													<ReportItems>
 														<Rectangle Name="Container10">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3137,6 +3387,7 @@
 																	<Width>7cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3158,6 +3409,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>123456789</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3167,13 +3422,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox21">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3196,7 +3451,7 @@
 													<ReportItems>
 														<Rectangle Name="Container3">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3209,6 +3464,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.4783cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3230,6 +3486,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>BC412</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3239,12 +3499,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox19">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3267,6 +3528,7 @@
 													<ReportItems>
 														<Rectangle Name="Container11">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3279,6 +3541,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.4783cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3300,6 +3563,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>123456789</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3309,13 +3576,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox17">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3338,7 +3605,7 @@
 													<ReportItems>
 														<Rectangle Name="Container4">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3351,6 +3618,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.4782cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3372,6 +3640,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>123456789</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3381,12 +3653,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox15">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3409,6 +3682,7 @@
 													<ReportItems>
 														<Rectangle Name="Container12">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3421,6 +3695,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.4782cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3442,6 +3717,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>1234567890123</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3451,13 +3730,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox13">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3480,7 +3759,7 @@
 													<ReportItems>
 														<Rectangle Name="Container5">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3492,6 +3771,7 @@
 																	<Width>7cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3513,6 +3793,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>123-ABC-123</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3522,12 +3806,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox11">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3550,6 +3835,7 @@
 													<ReportItems>
 														<Rectangle Name="Container13">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3561,6 +3847,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3582,6 +3869,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>+A99912345/$$520001510X36</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3591,13 +3882,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox9">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3620,7 +3911,7 @@
 													<ReportItems>
 														<Rectangle Name="Container6">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3632,6 +3923,7 @@
 																	<Width>6.9999cm</Width>
 																	<Height>1.5cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3653,6 +3945,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>+A99912345/$$520001510X36</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3662,12 +3958,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox7">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3690,6 +3987,7 @@
 													<ReportItems>
 														<Rectangle Name="Container14">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3702,6 +4000,7 @@
 																	<Width>7cm</Width>
 																	<Height>1.399cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3723,6 +4022,10 @@
 																			<Name>dd:Value</Name>
 																			<Value>ABC_12345</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3732,13 +4035,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox5">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3761,7 +4064,7 @@
 													<ReportItems>
 														<Rectangle Name="Container7">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3773,6 +4076,7 @@
 																	<Width>4.3735cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3798,6 +4102,10 @@
 																			<Name>dd:MaxiCodeOptions.Mode</Name>
 																			<Value>Mode4</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3807,12 +4115,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.706866in</Height>
+											<Height>0.689113in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox2">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<PaddingBottom>2pt</PaddingBottom>
 																<PaddingLeft>2pt</PaddingLeft>
@@ -3832,6 +4141,7 @@
 													<ReportItems>
 														<Rectangle Name="Container15">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3843,6 +4153,7 @@
 																	<Width>7cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3859,6 +4170,10 @@
 																			<Name>dd:CaptionLocation</Name>
 																			<Value>Above</Value>
 																		</CustomProperty>
+																		<CustomProperty>
+																			<Name>dd:QRCodeOptions.Encoding</Name>
+																			<Value>65001</Value>
+																		</CustomProperty>
 																	</CustomProperties>
 																</CustomReportItem>
 															</ReportItems>
@@ -3868,13 +4183,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.698064in</Height>
+											<Height>0.680532in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox3">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -3897,7 +4212,7 @@
 													<ReportItems>
 														<Rectangle Name="Container16">
 															<Style>
-																<BackgroundColor>LightGray</BackgroundColor>
+																<BackgroundColor>White</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -3910,6 +4225,7 @@
 																	<Width>2.818cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>White</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -3972,13 +4288,13 @@
 											</TableCells>
 										</TableRow>
 										<TableRow>
-											<Height>0.698064in</Height>
+											<Height>0.680532in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
 														<Textbox Name="TextBox4">
 															<Style>
-																<BackgroundColor>Transparent</BackgroundColor>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<FontFamily>Segoe UI Light</FontFamily>
 																<FontSize>10pt</FontSize>
 																<FontStyle>Normal</FontStyle>
@@ -4001,6 +4317,7 @@
 													<ReportItems>
 														<Rectangle Name="Container17">
 															<Style>
+																<BackgroundColor>LightGray</BackgroundColor>
 																<BorderStyle>
 																	<Default>Solid</Default>
 																</BorderStyle>
@@ -4013,6 +4330,7 @@
 																	<Width>2.818cm</Width>
 																	<Height>1.524cm</Height>
 																	<Style>
+																		<BackgroundColor>Transparent</BackgroundColor>
 																		<FontFamily>Courier New</FontFamily>
 																		<FontSize>8pt</FontSize>
 																	</Style>
@@ -4128,10 +4446,10 @@
 	</Body>
 	<BottomMargin>0.58201in</BottomMargin>
 	<LeftMargin>1in</LeftMargin>
-	<PageHeight>47.5in</PageHeight>
-	<PageWidth>8in</PageWidth>
 	<RightMargin>1in</RightMargin>
 	<TopMargin>1in</TopMargin>
+	<PageHeight>47.5in</PageHeight>
+	<PageWidth>8in</PageWidth>
 	<Width>8in</Width>
 	<DataSources>
 		<DataSource Name="DataSource1">
