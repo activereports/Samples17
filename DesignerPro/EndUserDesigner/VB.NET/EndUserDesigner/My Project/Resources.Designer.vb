@@ -11,6 +11,7 @@
 Option Strict On
 Option Explicit On
 
+Imports System
 
 Namespace My.Resources
     
@@ -21,7 +22,7 @@ Namespace My.Resources
     '''<summary>
     '''  A strongly-typed resource class, for looking up localized strings, etc.
     '''</summary>
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0"),  _
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0"),  _
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
@@ -57,6 +58,24 @@ Namespace My.Resources
             Set
                 resourceCulture = value
             End Set
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to E&amp;xit.
+        '''</summary>
+        Friend ReadOnly Property ExitText() As String
+            Get
+                Return ResourceManager.GetString("ExitText", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized string similar to &amp;New....
+        '''</summary>
+        Friend ReadOnly Property NewText() As String
+            Get
+                Return ResourceManager.GetString("NewText", resourceCulture)
+            End Get
         End Property
         
         '''<summary>
@@ -138,7 +157,7 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to ActiveReports 13.
+        '''  Looks up a localized string similar to ActiveReports.
         '''</summary>
         Friend ReadOnly Property DefaultGroup() As String
             Get
@@ -228,29 +247,11 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to E&amp;xit.
-        '''</summary>
-        Friend ReadOnly Property ExitText() As String
-            Get
-                Return ResourceManager.GetString("ExitText", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to &amp;Export.
         '''</summary>
         Friend ReadOnly Property Export() As String
             Get
                 Return ResourceManager.GetString("Export", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to &amp;Export.
-        '''</summary>
-        Friend ReadOnly Property ExportText() As String
-            Get
-                Return ResourceManager.GetString("ExportText", resourceCulture)
             End Get
         End Property
         
@@ -289,15 +290,6 @@ Namespace My.Resources
         Friend ReadOnly Property HideGroupPanelToolTip() As String
             Get
                 Return ResourceManager.GetString("HideGroupPanelToolTip", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Looks up a localized string similar to &amp;New....
-        '''</summary>
-        Friend ReadOnly Property NewText() As String
-            Get
-                Return ResourceManager.GetString("NewText", resourceCulture)
             End Get
         End Property
         
@@ -392,15 +384,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Looks up a localized string similar to EndUserDesigner - .
-        '''</summary>
-        Friend ReadOnly Property SampleNameTitle() As String
-            Get
-                Return ResourceManager.GetString("SampleNameTitle", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Looks up a localized string similar to &amp;Save.
         '''</summary>
         Friend ReadOnly Property Save() As String
@@ -419,6 +402,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to RDL Dashboard Report Files (*.rdlx)|*.rdlx.
+        '''</summary>
+        Friend ReadOnly Property SaveRdlDashboardFilter() As String
+            Get
+                Return ResourceManager.GetString("SaveRdlDashboardFilter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to RDL Report Files (*.rdlx)|*.rdlx.
         '''</summary>
         Friend ReadOnly Property SaveRdlFilter() As String
@@ -428,27 +420,20 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Looks up a localized string similar to RDL MultiSection Report Files (*.rdlx)|*.rdlx.
+        '''</summary>
+        Friend ReadOnly Property SaveRdlMultiSectionFilter() As String
+            Get
+                Return ResourceManager.GetString("SaveRdlMultiSectionFilter", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Looks up a localized string similar to Page Report Files (*.rdlx)|*.rdlx.
         '''</summary>
         Friend ReadOnly Property SaveRdlxFilter() As String
             Get
                 Return ResourceManager.GetString("SaveRdlxFilter", resourceCulture)
-            End Get
-        End Property
-
-        '''<summary>
-        '''</summary>
-        Friend ReadOnly Property SaveDashboardFilter() As String
-            Get
-                Return ResourceManager.GetString("SaveDashboardFilter", resourceCulture)
-            End Get
-        End Property
-
-        '''<summary>
-        '''</summary>
-        Friend ReadOnly Property SaveRdlxMultiSectionFilter() As String
-            Get
-                Return ResourceManager.GetString("SaveRdlxMultiSectionFilter", resourceCulture)
             End Get
         End Property
         

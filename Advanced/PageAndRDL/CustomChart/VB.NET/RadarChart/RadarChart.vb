@@ -17,6 +17,7 @@ Public NotInheritable Class RadarChart
 		Implements ICustomReportItem
 		Implements IStaticItem
 		Implements IReportItemRenderersFactory
+		Implements IAccessibleItem
 		Private Const SeriesValueName As String = "SeriesValue"
 
 #Region "Rendering"
@@ -338,6 +339,12 @@ Public NotInheritable Class RadarChart
 		ReadOnly Property Label() As String Implements IDocumentMapItem.Label
 			Get
 				Return _properties.GetValue("Label").ToString()
+			End Get
+		End Property
+
+		Public ReadOnly Property AccessibleDescription As String Implements IAccessibleItem.AccessibleDescription
+			Get
+				Return _properties.GetValue("AccessibleDescription").ToString()
 			End Get
 		End Property
 

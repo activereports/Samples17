@@ -16,7 +16,7 @@ using GrapeCity.ActiveReports.Rendering.RenderingTree.Tools;
 
 namespace GrapeCity.ActiveReports.Samples.Radar
 {
-	public sealed class RadarChart : IDataRegion, ICustomReportItem, IStaticItem, IReportItemRenderersFactory
+	public sealed class RadarChart : IDataRegion, ICustomReportItem, IStaticItem, IReportItemRenderersFactory, IAccessibleItem
 	{
 		private const string SeriesValueName = "SeriesValue";
 
@@ -311,6 +311,8 @@ namespace GrapeCity.ActiveReports.Samples.Radar
 		{
 			get { return _properties.GetValue("Label").ToString(); }
 		}
+
+		public string AccessibleDescription => _properties.GetValue("AccessibleDescription").ToString();
 
 		#endregion
 	}

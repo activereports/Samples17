@@ -338,11 +338,11 @@
 	<DataSets>
 		<DataSet Name="DataSet1">
 			<Fields>
-				<Field Name="CompanyName">
-					<DataField>CompanyName</DataField>
+				<Field Name="OrderID">
+					<DataField>OrderID</DataField>
 				</Field>
-				<Field Name="Country">
-					<DataField>Country</DataField>
+				<Field Name="ProductName">
+					<DataField>ProductName</DataField>
 				</Field>
 				<Field Name="UnitPrice">
 					<DataField>UnitPrice</DataField>
@@ -350,18 +350,12 @@
 				<Field Name="Quantity">
 					<DataField>Quantity</DataField>
 				</Field>
+				<Field Name="CompanyName">
+					<DataField>ancestor::Customer/CompanyName</DataField>
+				</Field>
 			</Fields>
-			<Filters>
-				<Filter>
-					<FilterExpression>=Fields!Country.Value</FilterExpression>
-					<FilterValues>
-						<FilterValue>=Parameters!Country.Value</FilterValue>
-					</FilterValues>
-					<Operator>Equal</Operator>
-				</Filter>
-			</Filters>
 			<Query>
-				<CommandText>//Customer</CommandText>
+				<CommandText>="Customers/Customer[Country ='" +  Parameters!Country.Value + "']/Orders/OrderDetails "</CommandText>
 				<DataSourceName>CountrySalesDS</DataSourceName>
 			</Query>
 		</DataSet>

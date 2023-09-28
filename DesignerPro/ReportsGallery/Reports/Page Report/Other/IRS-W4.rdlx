@@ -475,7 +475,7 @@ than one job.  (Entering "-0-" may help you avoid having too little tax withheld
 								<Left>2.6875in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -490,7 +490,7 @@ than one job.  (Entering "-0-" may help you avoid having too little tax withheld
 								<Left>3.625in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -505,7 +505,7 @@ than one job.  (Entering "-0-" may help you avoid having too little tax withheld
 								<Left>4.25in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -520,7 +520,7 @@ than one job.  (Entering "-0-" may help you avoid having too little tax withheld
 								<Left>3.5in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -535,7 +535,7 @@ than one job.  (Entering "-0-" may help you avoid having too little tax withheld
 								<Left>5.125in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -550,7 +550,7 @@ than one job.  (Entering "-0-" may help you avoid having too little tax withheld
 								<Left>5.75in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -1057,7 +1057,7 @@ seven eligible children or less "2" if you have eight or more eligible children.
 								<Left>6.1875in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -1072,7 +1072,7 @@ seven eligible children or less "2" if you have eight or more eligible children.
 								<Left>6.5625in</Left>
 								<Style>
 									<BorderStyle>
-										<Default>Dot</Default>
+										<Default>Dotted</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>1.5pt</Default>
@@ -1159,7 +1159,7 @@ seven eligible children or less "2" if you have eight or more eligible children.
 								<Height>0in</Height>
 								<Style>
 									<BorderStyle>
-										<Default>Dash</Default>
+										<Default>Dashed</Default>
 									</BorderStyle>
 									<BorderWidth>
 										<Default>0.75pt</Default>

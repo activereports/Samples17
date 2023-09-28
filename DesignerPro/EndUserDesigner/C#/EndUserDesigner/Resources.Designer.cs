@@ -193,6 +193,15 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GrapeCity ActiveReports Report Designer.
+        /// </summary>
+        internal static string DesignerFormTitle {
+            get {
+                return ResourceManager.GetString("DesignerFormTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to *.
         /// </summary>
         internal static string DirtySign {
@@ -375,15 +384,6 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to EndUserDesigner - .
-        /// </summary>
-        internal static string SampleNameTitle {
-            get {
-                return ResourceManager.GetString("SampleNameTitle", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to &amp;Save.
         /// </summary>
         internal static string Save {
@@ -402,6 +402,15 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to RDL Dashboard Report Files (*.rdlx)|*.rdlx.
+        /// </summary>
+        internal static string SaveRdlDashboardFilter {
+            get {
+                return ResourceManager.GetString("SaveRdlDashboardFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to RDL Report Files (*.rdlx)|*.rdlx.
         /// </summary>
         internal static string SaveRdlFilter {
@@ -411,11 +420,11 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to RDL Dashboard Report Files (*.rdlx)|*.rdlx.
+        ///   Looks up a localized string similar to RDL MultiSection Report Files (*.rdlx)|*.rdlx.
         /// </summary>
-        internal static string SaveRdlxDashboardFilter {
+        internal static string SaveRdlMultiSectionFilter {
             get {
-                return ResourceManager.GetString("SaveRdlxDashboardFilter", resourceCulture);
+                return ResourceManager.GetString("SaveRdlMultiSectionFilter", resourceCulture);
             }
         }
         
@@ -434,15 +443,6 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         internal static string SaveRdlxMasterFilter {
             get {
                 return ResourceManager.GetString("SaveRdlxMasterFilter", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to RDL Multi-Section Report Files (*.rdlx)|*.rdlx.
-        /// </summary>
-        internal static string SaveRdlxMultiSectionFilter {
-            get {
-                return ResourceManager.GetString("SaveRdlxMultiSectionFilter", resourceCulture);
             }
         }
         
@@ -470,6 +470,15 @@ namespace GrapeCity.ActiveReports.Designer.Win {
         internal static string ShowGroupPanelToolTip {
             get {
                 return ResourceManager.GetString("ShowGroupPanelToolTip", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {0}{1} - {2}.
+        /// </summary>
+        internal static string TitleFormat {
+            get {
+                return ResourceManager.GetString("TitleFormat", resourceCulture);
             }
         }
     }

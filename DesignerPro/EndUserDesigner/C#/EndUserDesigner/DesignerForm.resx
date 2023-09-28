@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -156,7 +156,7 @@
     <value>145, 20</value>
   </data>
   <data name="arToolbox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 390</value>
+    <value>145, 365</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="arToolbox.TabIndex" type="System.Int32, mscorlib">
@@ -193,7 +193,7 @@
     <value>0, 0</value>
   </data>
   <data name="reportsLibrary.Size" type="System.Drawing.Size, System.Drawing">
-    <value>145, 122</value>
+    <value>145, 147</value>
   </data>
   <data name="reportsLibrary.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -226,7 +226,7 @@
     <value>145, 516</value>
   </data>
   <data name="splitContainerReportsLibrary.SplitterDistance" type="System.Int32, mscorlib">
-    <value>390</value>
+    <value>365</value>
   </data>
   <data name="splitContainerReportsLibrary.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -283,7 +283,7 @@
     <value>0, 0</value>
   </data>
   <data name="arPropertyGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 329</value>
+    <value>194, 329</value>
   </data>
   <data name="arPropertyGrid.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -301,7 +301,7 @@
     <value>0</value>
   </data>
   <data name="arDesigner.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 374</value>
+    <value>559, 400</value>
   </data>
   <data name="arDesigner.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -330,123 +330,6 @@
   <data name="&gt;&gt;splitContainerGroupEditor.Panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="groupEditor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="groupEditor.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 21</value>
-  </data>
-  <data name="groupEditor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="groupEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 112</value>
-  </data>
-  <data name="groupEditor.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;groupEditor.Name" xml:space="preserve">
-    <value>groupEditor</value>
-  </data>
-  <data name="&gt;&gt;groupEditor.Type" xml:space="preserve">
-    <value>GrapeCity.ActiveReports.Design.GroupEditor.GroupEditor, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
-  </data>
-  <data name="&gt;&gt;groupEditor.Parent" xml:space="preserve">
-    <value>GroupEditorContainer</value>
-  </data>
-  <data name="&gt;&gt;groupEditor.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="GroupEditorToggleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Right</value>
-  </data>
-  <data name="GroupEditorToggleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="GroupEditorToggleButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>439, 2</value>
-  </data>
-  <data name="GroupEditorToggleButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>16, 16</value>
-  </data>
-  <data name="GroupEditorToggleButton.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorToggleButton.Name" xml:space="preserve">
-    <value>GroupEditorToggleButton</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorToggleButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorToggleButton.Parent" xml:space="preserve">
-    <value>GroupEditorSeparator</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorToggleButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Bottom, Left</value>
-  </data>
-  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>2, 0</value>
-  </data>
-  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 20</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Group Editor</value>
-  </data>
-  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>GroupEditorSeparator</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="GroupEditorSeparator.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Top</value>
-  </data>
-  <data name="GroupEditorSeparator.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1, 1</value>
-  </data>
-  <data name="GroupEditorSeparator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="GroupEditorSeparator.Size" type="System.Drawing.Size, System.Drawing">
-    <value>458, 20</value>
-  </data>
-  <data name="GroupEditorSeparator.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorSeparator.Name" xml:space="preserve">
-    <value>GroupEditorSeparator</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorSeparator.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorSeparator.Parent" xml:space="preserve">
-    <value>GroupEditorContainer</value>
-  </data>
-  <data name="&gt;&gt;GroupEditorSeparator.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="GroupEditorContainer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -460,7 +343,7 @@
     <value>1, 1, 1, 1</value>
   </data>
   <data name="GroupEditorContainer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>460, 134</value>
+    <value>557, 108</value>
   </data>
   <data name="GroupEditorContainer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -496,10 +379,10 @@
     <value>20</value>
   </data>
   <data name="splitContainerGroupEditor.Size" type="System.Drawing.Size, System.Drawing">
-    <value>462, 516</value>
+    <value>559, 516</value>
   </data>
   <data name="splitContainerGroupEditor.SplitterDistance" type="System.Int32, mscorlib">
-    <value>374</value>
+    <value>400</value>
   </data>
   <data name="splitContainerGroupEditor.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -537,111 +420,6 @@
   <data name="splitContainerProperties.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
-  <data name="reportExplorer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="reportExplorer.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="reportExplorer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>0, 0, 0, 0</value>
-  </data>
-  <data name="reportExplorer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 151</value>
-  </data>
-  <data name="reportExplorer.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;reportExplorer.Name" xml:space="preserve">
-    <value>reportExplorer</value>
-  </data>
-  <data name="&gt;&gt;reportExplorer.Type" xml:space="preserve">
-    <value>GrapeCity.ActiveReports.Design.ReportExplorer.ReportExplorer, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
-  </data>
-  <data name="&gt;&gt;reportExplorer.Parent" xml:space="preserve">
-    <value>reportExplorerTabPage</value>
-  </data>
-  <data name="&gt;&gt;reportExplorer.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="reportExplorerTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="reportExplorerTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="reportExplorerTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 157</value>
-  </data>
-  <data name="reportExplorerTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="reportExplorerTabPage.Text" xml:space="preserve">
-    <value>Report Explorer</value>
-  </data>
-  <data name="&gt;&gt;reportExplorerTabPage.Name" xml:space="preserve">
-    <value>reportExplorerTabPage</value>
-  </data>
-  <data name="&gt;&gt;reportExplorerTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;reportExplorerTabPage.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;reportExplorerTabPage.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="layerList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="layerList.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="layerList.Size" type="System.Drawing.Size, System.Drawing">
-    <value>277, 151</value>
-  </data>
-  <data name="layerList.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;layerList.Name" xml:space="preserve">
-    <value>layerList</value>
-  </data>
-  <data name="&gt;&gt;layerList.Type" xml:space="preserve">
-    <value>GrapeCity.ActiveReports.Design.LayerList, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
-  </data>
-  <data name="&gt;&gt;layerList.Parent" xml:space="preserve">
-    <value>layersTabPage</value>
-  </data>
-  <data name="&gt;&gt;layerList.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="layersTabPage.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 22</value>
-  </data>
-  <data name="layersTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="layersTabPage.Size" type="System.Drawing.Size, System.Drawing">
-    <value>283, 157</value>
-  </data>
-  <data name="layersTabPage.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="layersTabPage.Text" xml:space="preserve">
-    <value>Layers</value>
-  </data>
-  <data name="&gt;&gt;layersTabPage.Name" xml:space="preserve">
-    <value>layersTabPage</value>
-  </data>
-  <data name="&gt;&gt;layersTabPage.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;layersTabPage.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;layersTabPage.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
@@ -649,7 +427,7 @@
     <value>0, 0</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 183</value>
+    <value>194, 183</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -691,7 +469,7 @@
     <value>1</value>
   </data>
   <data name="splitContainerProperties.Size" type="System.Drawing.Size, System.Drawing">
-    <value>291, 516</value>
+    <value>194, 516</value>
   </data>
   <data name="splitContainerProperties.SplitterDistance" type="System.Int32, mscorlib">
     <value>183</value>
@@ -727,7 +505,7 @@
     <value>757, 516</value>
   </data>
   <data name="splitContainerDesigner.SplitterDistance" type="System.Int32, mscorlib">
-    <value>462</value>
+    <value>559</value>
   </data>
   <data name="splitContainerDesigner.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -855,6 +633,150 @@
   <data name="&gt;&gt;toolStripContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="GroupEditorSeparator.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="GroupEditorSeparator.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 1</value>
+  </data>
+  <data name="GroupEditorSeparator.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="GroupEditorSeparator.Size" type="System.Drawing.Size, System.Drawing">
+    <value>555, 20</value>
+  </data>
+  <data name="GroupEditorSeparator.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.Name" xml:space="preserve">
+    <value>GroupEditorSeparator</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.Parent" xml:space="preserve">
+    <value>GroupEditorContainer</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorSeparator.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="GroupEditorToggleButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Right</value>
+  </data>
+  <data name="GroupEditorToggleButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="GroupEditorToggleButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>537, 2</value>
+  </data>
+  <data name="GroupEditorToggleButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>16, 16</value>
+  </data>
+  <data name="GroupEditorToggleButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.Name" xml:space="preserve">
+    <value>GroupEditorToggleButton</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.Parent" xml:space="preserve">
+    <value>GroupEditorSeparator</value>
+  </data>
+  <data name="&gt;&gt;GroupEditorToggleButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Bottom, Left</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>2, 0</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Group Editor</value>
+  </data>
+  <data name="label1.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>GroupEditorSeparator</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="reportExplorerTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="reportExplorerTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="reportExplorerTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 157</value>
+  </data>
+  <data name="reportExplorerTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="reportExplorerTabPage.Text" xml:space="preserve">
+    <value>Report Explorer</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.Name" xml:space="preserve">
+    <value>reportExplorerTabPage</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;reportExplorerTabPage.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="layersTabPage.Location" type="System.Drawing.Point, System.Drawing">
+    <value>4, 22</value>
+  </data>
+  <data name="layersTabPage.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="layersTabPage.Size" type="System.Drawing.Size, System.Drawing">
+    <value>186, 157</value>
+  </data>
+  <data name="layersTabPage.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="layersTabPage.Text" xml:space="preserve">
+    <value>Layers</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.Name" xml:space="preserve">
+    <value>layersTabPage</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;layersTabPage.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <metadata name="statusStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>404, 17</value>
   </metadata>
@@ -897,6 +819,84 @@
   <metadata name="GroupPanelVisibility.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>243, 17</value>
   </metadata>
+  <data name="groupEditor.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="groupEditor.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1, 21</value>
+  </data>
+  <data name="groupEditor.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="groupEditor.Size" type="System.Drawing.Size, System.Drawing">
+    <value>555, 86</value>
+  </data>
+  <data name="groupEditor.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.Name" xml:space="preserve">
+    <value>groupEditor</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.GroupEditor.GroupEditor, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.Parent" xml:space="preserve">
+    <value>GroupEditorContainer</value>
+  </data>
+  <data name="&gt;&gt;groupEditor.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="reportExplorer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="reportExplorer.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="reportExplorer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>0, 0, 0, 0</value>
+  </data>
+  <data name="reportExplorer.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 151</value>
+  </data>
+  <data name="reportExplorer.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.Name" xml:space="preserve">
+    <value>reportExplorer</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.ReportExplorer.ReportExplorer, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.Parent" xml:space="preserve">
+    <value>reportExplorerTabPage</value>
+  </data>
+  <data name="&gt;&gt;reportExplorer.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="layerList.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="layerList.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="layerList.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 151</value>
+  </data>
+  <data name="layerList.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layerList.Name" xml:space="preserve">
+    <value>layerList</value>
+  </data>
+  <data name="&gt;&gt;layerList.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Design.LayerList, GrapeCity.ActiveReports.Design.Win, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
+  </data>
+  <data name="&gt;&gt;layerList.Parent" xml:space="preserve">
+    <value>layersTabPage</value>
+  </data>
+  <data name="&gt;&gt;layerList.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -906,8 +906,14 @@
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>906, 563</value>
   </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>EndUserDesigner</value>
+    <value>GrapeCity ActiveReports Report Designer</value>
+  </data>
+  <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
+    <value>800, 600</value>
   </data>
   <data name="&gt;&gt;toolStripStatusLabel1.Name" xml:space="preserve">
     <value>toolStripStatusLabel1</value>

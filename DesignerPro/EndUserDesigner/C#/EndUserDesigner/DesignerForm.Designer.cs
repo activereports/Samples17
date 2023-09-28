@@ -1,4 +1,4 @@
-﻿using System.Windows.Forms;
+using System.Windows.Forms;
 using GrapeCity.ActiveReports.Design;
 
 namespace GrapeCity.ActiveReports.Designer.Win
@@ -35,52 +35,43 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DesignerForm));
 			this.toolStripContainer1 = new System.Windows.Forms.ToolStripContainer();
 			this.splitContainerToolbox = new System.Windows.Forms.SplitContainer();
-			this.splitContainerReportsLibrary = new System.Windows.Forms.SplitContainer();
-			this.arToolbox = new GrapeCity.ActiveReports.Design.Toolbox.Toolbox();
-			this.reportsLibrary = new GrapeCity.ActiveReports.Design.ReportsLibrary.ReportsLibrary();
 			this.splitContainerDesigner = new System.Windows.Forms.SplitContainer();
 			this.splitContainerGroupEditor = new System.Windows.Forms.SplitContainer();
-			this.arDesigner = new GrapeCity.ActiveReports.Design.Designer();
 			this.arPropertyGrid = new System.Windows.Forms.PropertyGrid();
 			this.GroupEditorContainer = new System.Windows.Forms.Panel();
-			this.groupEditor = new GrapeCity.ActiveReports.Design.GroupEditor.GroupEditor();
 			this.GroupEditorSeparator = new System.Windows.Forms.Panel();
 			this.GroupEditorToggleButton = new System.Windows.Forms.PictureBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.splitContainerProperties = new System.Windows.Forms.SplitContainer();
 			this.tabControl1 = new System.Windows.Forms.TabControl();
 			this.reportExplorerTabPage = new System.Windows.Forms.TabPage();
-			this.reportExplorer = new GrapeCity.ActiveReports.Design.ReportExplorer.ReportExplorer();
 			this.layersTabPage = new System.Windows.Forms.TabPage();
-			this.layerList = new GrapeCity.ActiveReports.Design.LayerList();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.openDialog = new System.Windows.Forms.OpenFileDialog();
 			this.saveDialog = new System.Windows.Forms.SaveFileDialog();
 			this.GroupPanelVisibility = new System.Windows.Forms.ToolTip(this.components);
+			this.splitContainerReportsLibrary = new System.Windows.Forms.SplitContainer();
+			this.arToolbox = new GrapeCity.ActiveReports.Design.Toolbox.Toolbox();
+			this.reportsLibrary = new GrapeCity.ActiveReports.Design.ReportsLibrary.ReportsLibrary();
+			this.arDesigner = new GrapeCity.ActiveReports.Design.Designer();
+			this.groupEditor = new GrapeCity.ActiveReports.Design.GroupEditor.GroupEditor();
+			this.reportExplorer = new GrapeCity.ActiveReports.Design.ReportExplorer.ReportExplorer();
+			this.layerList = new GrapeCity.ActiveReports.Design.LayerList();
 			this.toolStripContainer1.ContentPanel.SuspendLayout();
 			this.toolStripContainer1.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerToolbox)).BeginInit();
 			this.splitContainerToolbox.Panel1.SuspendLayout();
 			this.splitContainerToolbox.Panel2.SuspendLayout();
 			this.splitContainerToolbox.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerReportsLibrary)).BeginInit();
-			this.splitContainerReportsLibrary.Panel1.SuspendLayout();
-			this.splitContainerReportsLibrary.Panel2.SuspendLayout();
-			this.splitContainerReportsLibrary.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.arToolbox)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerDesigner)).BeginInit();
 			this.splitContainerDesigner.Panel1.SuspendLayout();
 			this.splitContainerDesigner.Panel2.SuspendLayout();
 			this.splitContainerDesigner.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerGroupEditor)).BeginInit();
 			this.splitContainerGroupEditor.Panel1.SuspendLayout();
 			this.splitContainerGroupEditor.Panel2.SuspendLayout();
 			this.splitContainerGroupEditor.SuspendLayout();
 			this.GroupEditorContainer.SuspendLayout();
 			this.GroupEditorSeparator.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.GroupEditorToggleButton)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerProperties)).BeginInit();
 			this.splitContainerProperties.Panel1.SuspendLayout();
 			this.splitContainerProperties.Panel2.SuspendLayout();
 			this.splitContainerProperties.SuspendLayout();
@@ -88,6 +79,10 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			this.reportExplorerTabPage.SuspendLayout();
 			this.layersTabPage.SuspendLayout();
 			this.statusStrip1.SuspendLayout();
+			this.splitContainerReportsLibrary.Panel1.SuspendLayout();
+			this.splitContainerReportsLibrary.Panel2.SuspendLayout();
+			this.splitContainerReportsLibrary.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.arToolbox)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// toolStripContainer1
@@ -113,32 +108,6 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			// splitContainerToolbox.Panel2
 			// 
 			this.splitContainerToolbox.Panel2.Controls.Add(this.splitContainerDesigner);
-			// 
-			// splitContainerReportsLibrary
-			// 
-			resources.ApplyResources(this.splitContainerReportsLibrary, "splitContainerReportsLibrary");
-			this.splitContainerReportsLibrary.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
-			this.splitContainerReportsLibrary.Name = "splitContainerReportsLibrary";
-			// 
-			// splitContainerReportsLibrary.Panel1
-			// 
-			this.splitContainerReportsLibrary.Panel1.Controls.Add(this.arToolbox);
-			// 
-			// splitContainerReportsLibrary.Panel2
-			// 
-			this.splitContainerReportsLibrary.Panel2.Controls.Add(this.reportsLibrary);
-			// 
-			// arToolbox
-			// 
-			this.arToolbox.DesignerHost = null;
-			resources.ApplyResources(this.arToolbox, "arToolbox");
-			this.arToolbox.Name = "arToolbox";
-			// 
-			// reportsLibrary
-			// 
-			resources.ApplyResources(this.reportsLibrary, "reportsLibrary");
-			this.reportsLibrary.Name = "reportsLibrary";
-			this.reportsLibrary.ReportDesigner = null;
 			// 
 			// splitContainerDesigner
 			// 
@@ -169,20 +138,6 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			this.splitContainerGroupEditor.Panel2.Controls.Add(this.GroupEditorContainer);
 			resources.ApplyResources(this.splitContainerGroupEditor.Panel2, "splitContainerGroupEditor.Panel2");
 			// 
-			// arDesigner
-			// 
-			resources.ApplyResources(this.arDesigner, "arDesigner");
-			this.arDesigner.IsDirty = false;
-			this.arDesigner.LockControls = false;
-			this.arDesigner.Name = "arDesigner";
-			this.arDesigner.PreviewPages = 10;
-			this.arDesigner.PromptUser = false;
-			this.arDesigner.PropertyGrid = this.arPropertyGrid;
-			this.arDesigner.ReportTabsVisible = true;
-			this.arDesigner.ShowDataSourceIcon = true;
-			this.arDesigner.Toolbox = null;
-			this.arDesigner.ToolBoxItem = null;
-			// 
 			// arPropertyGrid
 			// 
 			resources.ApplyResources(this.arPropertyGrid, "arPropertyGrid");
@@ -196,13 +151,6 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			this.GroupEditorContainer.Controls.Add(this.GroupEditorSeparator);
 			resources.ApplyResources(this.GroupEditorContainer, "GroupEditorContainer");
 			this.GroupEditorContainer.Name = "GroupEditorContainer";
-			// 
-			// groupEditor
-			// 
-			this.groupEditor.BackColor = System.Drawing.Color.White;
-			resources.ApplyResources(this.groupEditor, "groupEditor");
-			this.groupEditor.Name = "groupEditor";
-			this.groupEditor.ReportDesigner = null;
 			// 
 			// GroupEditorSeparator
 			// 
@@ -253,23 +201,11 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			resources.ApplyResources(this.reportExplorerTabPage, "reportExplorerTabPage");
 			this.reportExplorerTabPage.Name = "reportExplorerTabPage";
 			// 
-			// reportExplorer
-			// 
-			resources.ApplyResources(this.reportExplorer, "reportExplorer");
-			this.reportExplorer.Name = "reportExplorer";
-			this.reportExplorer.ReportDesigner = null;
-			// 
 			// layersTabPage
 			// 
 			this.layersTabPage.Controls.Add(this.layerList);
 			resources.ApplyResources(this.layersTabPage, "layersTabPage");
 			this.layersTabPage.Name = "layersTabPage";
-			// 
-			// layerList
-			// 
-			resources.ApplyResources(this.layerList, "layerList");
-			this.layerList.Name = "layerList";
-			this.layerList.ReportDesigner = null;
 			// 
 			// statusStrip1
 			// 
@@ -289,6 +225,64 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			// 
 			resources.ApplyResources(this.openDialog, "openDialog");
 			// 
+			// splitContainerReportsLibrary
+			// 
+			resources.ApplyResources(this.splitContainerReportsLibrary, "splitContainerReportsLibrary");
+			this.splitContainerReportsLibrary.FixedPanel = System.Windows.Forms.FixedPanel.Panel2;
+			this.splitContainerReportsLibrary.Name = "splitContainerReportsLibrary";
+			// 
+			// splitContainerReportsLibrary.Panel1
+			// 
+			this.splitContainerReportsLibrary.Panel1.Controls.Add(this.arToolbox);
+			// 
+			// splitContainerReportsLibrary.Panel2
+			// 
+			this.splitContainerReportsLibrary.Panel2.Controls.Add(this.reportsLibrary);
+			// 
+			// arToolbox
+			// 
+			this.arToolbox.DesignerHost = null;
+			resources.ApplyResources(this.arToolbox, "arToolbox");
+			this.arToolbox.Name = "arToolbox";
+			// 
+			// reportsLibrary
+			// 
+			resources.ApplyResources(this.reportsLibrary, "reportsLibrary");
+			this.reportsLibrary.Name = "reportsLibrary";
+			this.reportsLibrary.ReportDesigner = null;
+			// 
+			// arDesigner
+			// 
+			resources.ApplyResources(this.arDesigner, "arDesigner");
+			this.arDesigner.IsDirty = false;
+			this.arDesigner.LockControls = false;
+			this.arDesigner.Name = "arDesigner";
+			this.arDesigner.PromptUser = false;
+			this.arDesigner.PropertyGrid = this.arPropertyGrid;
+			this.arDesigner.ReportTabsVisible = true;
+			this.arDesigner.ShowDataSourceIcon = true;
+			this.arDesigner.Toolbox = null;
+			this.arDesigner.ToolBoxItem = null;
+			// 
+			// groupEditor
+			// 
+			this.groupEditor.BackColor = System.Drawing.Color.White;
+			resources.ApplyResources(this.groupEditor, "groupEditor");
+			this.groupEditor.Name = "groupEditor";
+			this.groupEditor.ReportDesigner = null;
+			// 
+			// reportExplorer
+			// 
+			resources.ApplyResources(this.reportExplorer, "reportExplorer");
+			this.reportExplorer.Name = "reportExplorer";
+			this.reportExplorer.ReportDesigner = null;
+			// 
+			// layerList
+			// 
+			resources.ApplyResources(this.layerList, "layerList");
+			this.layerList.Name = "layerList";
+			this.layerList.ReportDesigner = null;
+			// 
 			// DesignerForm
 			// 
 			resources.ApplyResources(this, "$this");
@@ -302,33 +296,28 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			this.toolStripContainer1.PerformLayout();
 			this.splitContainerToolbox.Panel1.ResumeLayout(false);
 			this.splitContainerToolbox.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerToolbox)).EndInit();
 			this.splitContainerToolbox.ResumeLayout(false);
-			this.splitContainerReportsLibrary.Panel1.ResumeLayout(false);
-			this.splitContainerReportsLibrary.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerReportsLibrary)).EndInit();
-			this.splitContainerReportsLibrary.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.arToolbox)).EndInit();
 			this.splitContainerDesigner.Panel1.ResumeLayout(false);
 			this.splitContainerDesigner.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerDesigner)).EndInit();
 			this.splitContainerDesigner.ResumeLayout(false);
 			this.splitContainerGroupEditor.Panel1.ResumeLayout(false);
 			this.splitContainerGroupEditor.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerGroupEditor)).EndInit();
 			this.splitContainerGroupEditor.ResumeLayout(false);
 			this.GroupEditorContainer.ResumeLayout(false);
 			this.GroupEditorSeparator.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.GroupEditorToggleButton)).EndInit();
 			this.splitContainerProperties.Panel1.ResumeLayout(false);
 			this.splitContainerProperties.Panel2.ResumeLayout(false);
-			((System.ComponentModel.ISupportInitialize)(this.splitContainerProperties)).EndInit();
 			this.splitContainerProperties.ResumeLayout(false);
 			this.tabControl1.ResumeLayout(false);
 			this.reportExplorerTabPage.ResumeLayout(false);
 			this.layersTabPage.ResumeLayout(false);
 			this.statusStrip1.ResumeLayout(false);
 			this.statusStrip1.PerformLayout();
+			this.splitContainerReportsLibrary.Panel1.ResumeLayout(false);
+			this.splitContainerReportsLibrary.Panel2.ResumeLayout(false);
+			this.splitContainerReportsLibrary.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.arToolbox)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

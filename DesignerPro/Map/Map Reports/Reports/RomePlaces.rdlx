@@ -4,12 +4,10 @@
 		<Height>8.375in</Height>
 		<ReportItems>
 			<Textbox Name="TextBox1">
-				<CanGrow>true</CanGrow>
-				<Height>0.375in</Height>
+				<Top>1in</Top>
 				<Left>0.125in</Left>
-				<Value>Points of interest in Rome
-
- </Value>
+				<Width>8.25in</Width>
+				<Height>0.375in</Height>
 				<Style>
 					<FontFamily>Tahoma</FontFamily>
 					<FontSize>16pt</FontSize>
@@ -20,11 +18,22 @@
 					<PaddingTop>2pt</PaddingTop>
 					<TextAlign>Center</TextAlign>
 				</Style>
-				<Top>1in</Top>
-				<Width>8.25in</Width>
 				<ZIndex>1</ZIndex>
+				<CanGrow>true</CanGrow>
+				<Value>Points of interest in Rome
+
+ </Value>
 			</Textbox>
 			<Map Name="Map1">
+				<Top>1.5in</Top>
+				<Left>0.125in</Left>
+				<Width>8.25in</Width>
+				<Height>6.875in</Height>
+				<Style>
+					<BackgroundColor>#9FB7C1</BackgroundColor>
+					<BackgroundGradientEndColor>#61818C</BackgroundGradientEndColor>
+					<BackgroundGradientType>TopBottom</BackgroundGradientType>
+				</Style>
 				<MapViewport>
 					<Style>
 						<BackgroundColor>#DFE3E6</BackgroundColor>
@@ -366,30 +375,22 @@
 					<TopMargin>0pt</TopMargin>
 					<BottomMargin>0pt</BottomMargin>
 				</MapColorScale>
-				<Top>1.5in</Top>
-				<Left>0.125in</Left>
-				<Height>6.875in</Height>
-				<Width>8.25in</Width>
-				<Style>
-					<BackgroundColor>#9FB7C1</BackgroundColor>
-					<BackgroundGradientEndColor>#61818C</BackgroundGradientEndColor>
-					<BackgroundGradientType>TopBottom</BackgroundGradientType>
-				</Style>
+				<DataElementName>Map1</DataElementName>
 			</Map>
 			<Textbox Name="TextBox2">
-				<CanGrow>true</CanGrow>
-				<Height>0.625in</Height>
+				<Top>0.125in</Top>
 				<Left>0.125in</Left>
-				<Value>Google made some changes to Google maps API Standard Plan starting from Jun 22, 2016 and now keyless access is not supported. Hence, error is appearing on report below. To remove this error add the code present in 'Google' heading in Point #6 in the help link http://www.grapecity.com/activereports/docs/v16/online/create-a-map-using-tile-layer.html</Value>
+				<Width>8.125in</Width>
+				<Height>0.625in</Height>
 				<Style>
 					<PaddingBottom>2pt</PaddingBottom>
 					<PaddingLeft>2pt</PaddingLeft>
 					<PaddingRight>2pt</PaddingRight>
 					<PaddingTop>2pt</PaddingTop>
 				</Style>
-				<Top>0.125in</Top>
-				<Width>8.125in</Width>
 				<ZIndex>2</ZIndex>
+				<CanGrow>true</CanGrow>
+				<Value>Google made some changes to Google maps API Standard Plan starting from Jun 22, 2016 and now keyless access is not supported. Hence, error is appearing on report below. To remove this error add the code present in 'Google' heading in Point #6 in the help link https://www.grapecity.com/activereportsnet/docs/latest/online/tile-layer.html</Value>
 			</Textbox>
 		</ReportItems>
 	</Body>

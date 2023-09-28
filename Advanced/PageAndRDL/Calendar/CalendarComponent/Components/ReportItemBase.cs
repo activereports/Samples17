@@ -11,7 +11,7 @@ namespace GrapeCity.ActiveReports.Calendar.Components
 	/// <summary>
 	/// Implements the boilerplate functionality of <see cref="IReportItem" />.
 	/// </summary>
-	public abstract class ReportItemBase : IReportItem, IToggleReceiver
+	public abstract class ReportItemBase : IReportItem, IToggleReceiver, IAccessibleItem
 	{
 		private IDataScope _dataScope;
 		private IPropertyBag _propertyBag;
@@ -277,6 +277,10 @@ namespace GrapeCity.ActiveReports.Calendar.Components
 			get { return (bool)PropertyBag.GetValue("KeepTogether"); }
 		}
 
+		/// <summary>
+		/// Gets a value to be used by accessible client applications, for example PDF/A voice readers
+		/// </summary>
+		public string AccessibleDescription => PropertyBag.GetValue("AccessibleDescription").ToString();
 		#endregion
 	}
 }

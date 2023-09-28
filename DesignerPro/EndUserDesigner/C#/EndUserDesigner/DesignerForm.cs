@@ -1,24 +1,26 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.Design;
-using System.Drawing;
 using System.IO;
 using System.Reflection;
 using System.Windows.Forms;
-using GrapeCity.ActiveReports.Configuration;
 using GrapeCity.ActiveReports.Design.ReportsLibrary;
 using GrapeCity.ActiveReports.PageReportModel;
 using GrapeCity.ActiveReports.Design;
-using GrapeCity.ActiveReports.ReportsCore.Configuration;
 using GrapeCity.ActiveReports.Viewer.Win.Internal.Export;
 using GrapeCity.ActiveReports.Win.Export;
+using GrapeCity.ActiveReports.Design.Tools;
+using GrapeCity.ActiveReports.Viewer.Win;
 using Image = System.Drawing.Image;
+using Color = System.Drawing.Color;
+using GrapeCity.Viewer.Common.ViewModel;
 
 namespace GrapeCity.ActiveReports.Designer.Win
 {
 	internal partial class DesignerForm : Form
 	{
+		private const string ShowReportsLibraryKey = "ShowReportsLibrary";
 		private const ExportForm.ReportType DefaultReportType = ExportForm.ReportType.PageCpl;
 
 		private string _reportName;
@@ -34,11 +36,13 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		public DesignerForm()
 		{
 			InitializeComponent();
-			Icon = Resources.App;
+			Font = DefaultFontFactory.DefaultWinFormsFont;
+			arPropertyGrid.Font = DefaultFontFactory.DefaultWinFormsFont;
+            Icon = Resources.App;
 
 			//Create new report instance and assign to Report Explorer
 			//Note:  Assigning the ToolBox to the designer before calling NewReport
-			// will automaticly add the default controls to the toolbox in a group called
+			// will automatically add the default controls to the toolbox in a group called
 			// "ActiveReports"
 			arDesigner.Toolbox = arToolbox;
 			arDesigner.LayoutChanged += OnDesignerLayoutChanged;
@@ -46,45 +50,29 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			layerList.ReportDesigner = arDesigner;
 			groupEditor.ReportDesigner = arDesigner;
 			reportsLibrary.ReportDesigner = arDesigner;
-			var config = Configuration;
-			if (config != null && !string.IsNullOrEmpty(config.Settings[ReportPartsDirectoryKey]))
+			var config = GlobalServices.Instance.EnsureConfigurationManager();
+			if (!string.IsNullOrEmpty(config.Settings[ReportPartsDirectoryKey]))
 				arDesigner.ReportPartsDirectory = config.Settings[ReportPartsDirectoryKey];
 
 			// Add Menu and CommandBar to Form
-			ToolStrip menuStrip = arDesigner.CreateToolStrips(DesignerToolStrips.Menu)[0];
-
-			var fileMenu = (ToolStripDropDownItem)menuStrip.Items[0];
-			CreateFileMenu(fileMenu);
-
-			AppendToolStrips(0, new[] { menuStrip });
-			AppendToolStrips(1, arDesigner.CreateToolStrips(
-				DesignerToolStrips.Edit,
-				DesignerToolStrips.Undo,
-				DesignerToolStrips.Zoom));
-
-			ToolStrip reportStrip = CreateReportToolbar();
-			AppendToolStrips(1, new List<ToolStrip> { reportStrip });
-
-			AppendToolStrips(2, arDesigner.CreateToolStrips(
-				DesignerToolStrips.Format, DesignerToolStrips.Layout));
-
-			menuStrip.Items.Add(CreateHelpMenu());
+			InitiazlizeToolstrip();
 
 			// Activate default group on the toolbox
 			arToolbox.SelectedCategory = Resources.DefaultGroup;
 			
 			SetReportName(null);
 
-			arDesigner.ReportChanged += (_, __) => UpdateReportName();
-			arDesigner.LayoutChanged += (_, args) => { if (args.Type == LayoutChangeType.ReportLoad || args.Type == LayoutChangeType.ReportClear)
+			bool showResult;
+            arDesigner.ReportChanged += (_, __) => UpdateReportName();
+			arDesigner.LayoutChanged += (_, args) => 
+			{ 
+				if (args.Type == LayoutChangeType.ReportLoad || args.Type == LayoutChangeType.ReportClear)
 				{
-					if (arDesigner.Report is SectionReport)
-						reportsLibrary.Visible = false;
-					else
-						reportsLibrary.Visible = true;
+					reportsLibrary.Visible = !(arDesigner.Report is SectionReport) && (bool.TryParse(config.Settings[ShowReportsLibraryKey], out showResult) && showResult);
 					RefreshExportEnabled();
 				}
 			};
+			reportsLibrary.Visible = !(arDesigner.Report is SectionReport) && (bool.TryParse(config.Settings[ShowReportsLibraryKey], out showResult) && showResult);
 			RefreshExportEnabled();
 			RefreshLayersTab();
 			RefreshGroupEditor();
@@ -96,22 +84,30 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			DragEnter += DesignerForm_DragEnter;
 			DragDrop += DesignerForm_DragDrop;
 		}
-
-		IConfigurationManager Configuration
+		
+		private void InitiazlizeToolstrip()
 		{
-			get
-			{
-				var configManager = GlobalServices.Instance.GetService(typeof(IConfigurationManager)) as IConfigurationManager;
-				if (configManager == null)
-				{
-					var provider = GlobalServices.Instance.GetService(typeof(IConfigurationProvider)) as IConfigurationProvider;
-					if (provider != null)
-					{
-						return new ReportingConfiguration(provider);
-					}
-				}
-				return configManager;
-			}
+			InitializeMenuStrip();
+			InitializeReportStrip();
+		}
+
+		private void InitializeMenuStrip()
+		{
+			ToolStrip menuStrip = arDesigner.CreateToolStrips(DesignerToolStrips.Menu)[0];
+			menuStrip.Items.Add(CreateHelpMenu());
+			menuStrip.Font = DefaultFontFactory.DefaultWinFormsFont;
+			CreateFileMenu((ToolStripDropDownItem)menuStrip.Items[0]);
+			AppendToolStrips(0, new[] { menuStrip });
+		}
+
+		private void InitializeReportStrip()
+		{
+			AppendToolStrips(1, arDesigner.CreateToolStrips(DesignerToolStrips.Edit, DesignerToolStrips.Undo, DesignerToolStrips.Zoom));
+
+			ToolStrip reportStrip = CreateReportToolbar();
+			reportStrip.Font = Font;
+			AppendToolStrips(1, new List<ToolStrip> { reportStrip });
+			AppendToolStrips(2, arDesigner.CreateToolStrips(DesignerToolStrips.Format, DesignerToolStrips.Layout));
 		}
 
 		void DesignerForm_DragEnter(object sender, DragEventArgs e)
@@ -141,7 +137,9 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			_exportReportType = DefaultReportType;
 			string[] commandLineArgs = Environment.GetCommandLineArgs();
 			if (commandLineArgs.Length > 1)
+			{
 				TryLoadReport(commandLineArgs[1]);
+			}
 		}
 
 		private void RefreshExportEnabled()
@@ -152,8 +150,13 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		}
 
 		private void OnEnableExport(object sender, EventArgs eventArgs)
+		{	
+			_exportMenuItem.Enabled = IsEnabledExportButton();
+		}
+
+		private bool IsEnabledExportButton()
 		{
-			_exportMenuItem.Enabled = arDesigner.ActiveTab == DesignerTab.Preview;
+			return arDesigner.ActiveTab == DesignerTab.Preview;
 		}
 
 		private void OnDesignerLayoutChanged(object sender, LayoutChangedArgs e)
@@ -189,10 +192,10 @@ namespace GrapeCity.ActiveReports.Designer.Win
 					// if page report was converted to master - update its extension
 					if (GetIsMaster())
 					{
-						var extansion = Path.GetExtension(_reportName);
-						if (!string.IsNullOrEmpty(extansion) &&
-							(extansion.ToLowerInvariant() == ".rdl" ||
-							 extansion.ToLowerInvariant() == ".rdlx"))
+						var extension = Path.GetExtension(_reportName);
+						if (!string.IsNullOrEmpty(extension) &&
+							(extension.ToLowerInvariant() == ".rdl" ||
+							 extension.ToLowerInvariant() == ".rdlx"))
 						{
 							_reportName = $"{Path.GetFileNameWithoutExtension(_reportName)}.rdlx-master";
 
@@ -332,9 +335,6 @@ namespace GrapeCity.ActiveReports.Designer.Win
 				return;
 
 			arDesigner.ExecuteAction(DesignerAction.NewReport);
-
-			var newReportName = arDesigner.ReportType == DesignerReportType.Section ? Resources.DefaultReportNameRpx : Resources.DefaultReportNameRdlx;
-			SetReportName(newReportName);
 		}
 
 		private void OnOpen(object sender, EventArgs e)
@@ -374,18 +374,17 @@ namespace GrapeCity.ActiveReports.Designer.Win
 				arDesigner.LoadReport(new FileInfo(fileName));
 				UpdateReport(fileName);
 			}
-			catch (Exception)
+			catch
 			{
 				MessageBox.Show(this, string.Format(Resources.ReportIsNotValid, fileName), 
-					"Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
+					Resources.DesignerFormTitle, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				if (string.IsNullOrEmpty(_reportName))
 				{
 					arDesigner.NewReport(_reportType);
 					UpdateReport(null);
 					return;
 				}
-
+				
 				TryLoadReport(_reportName);
 			}
 		}
@@ -418,12 +417,12 @@ namespace GrapeCity.ActiveReports.Designer.Win
 				case DesignerReportType.Section:
 					return Resources.SaveRpxFilter;
 				case DesignerReportType.Page:
-                    return Resources.SaveRdlxFilter;
-                case DesignerReportType.RdlDashboard:
-					return Resources.SaveRdlxDashboardFilter;
+					return Resources.SaveRdlxFilter;
 				case DesignerReportType.RdlMultiSection:
-                    return isMaster ? Resources.SaveRdlxMasterFilter : Resources.SaveRdlxMultiSectionFilter;
-                case DesignerReportType.Rdl:
+					return isMaster ? Resources.SaveRdlxMasterFilter : Resources.SaveRdlMultiSectionFilter;
+				case DesignerReportType.RdlDashboard:
+					return Resources.SaveRdlDashboardFilter;
+				case DesignerReportType.Rdl:
 					return isMaster ? Resources.SaveRdlxMasterFilter : Resources.SaveRdlFilter;
 				default:
 					return Resources.SaveRpxFilter;
@@ -455,7 +454,27 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			{
 				_exportForm = new ExportForm();
 			}
+			_exportReportType = DetermineReportType();
 			_exportForm.Show(this, new ExportViewer(arDesigner.ReportViewer), _exportReportType);
+		}
+
+		private ExportForm.ReportType DetermineReportTypeByOpenedReport()
+		{
+			OpenedReport openedReport = arDesigner.ReportViewer.OpenedReport;
+
+			switch (openedReport)
+			{
+				case OpenedReport.Fpl:
+					return ExportForm.ReportType.PageFpl;
+				case OpenedReport.Dashboard:
+					return ExportForm.ReportType.Dashboard;
+				case OpenedReport.Section:
+					return ExportForm.ReportType.Section;
+				case OpenedReport.Cpl:
+				case OpenedReport.None:
+				default:
+					return DefaultReportType;
+			}
 		}
 
 		/// <summary>
@@ -463,6 +482,11 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		/// </summary>
 		private ExportForm.ReportType DetermineReportType()
 		{
+			if(arDesigner.ActiveTab == DesignerTab.Preview)
+			{
+				return DetermineReportTypeByOpenedReport();
+			}
+
 			var sectionReport = arDesigner.Report as SectionReport;
 			if (sectionReport != null) return ExportForm.ReportType.Section;
 			
@@ -470,17 +494,19 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			if (pageReport == null) return DefaultReportType;
 
 			var report = pageReport.Report;
-			if (report == null || report.Body == null) return DefaultReportType;
 
-			ReportItemCollection items = report.Body.ReportItems;
+			if (report != null && report.ViewerType == ViewerType.Dashboard) return ExportForm.ReportType.Dashboard;
+
+			if (report?.ReportSections.Count == 0) return DefaultReportType;
+
+			ReportItemCollection items = report?.ReportSections[0].Body?.ReportItems;
 			return items != null && items.Count == 1 && items[0] is FixedPage ? ExportForm.ReportType.PageFpl : ExportForm.ReportType.PageCpl;
 		}
 
 		private bool GetIsMaster()
 		{
 			bool isMaster = false;
-			if (arDesigner.ReportType == DesignerReportType.Rdl ||
-			    arDesigner.ReportType == DesignerReportType.RdlMultiSection)
+			if (arDesigner.ReportType == DesignerReportType.Rdl || arDesigner.ReportType == DesignerReportType.RdlMultiSection)
 			{
 				var report = (Component) arDesigner.Report;
 				var site = report == null ? null : report.Site;
@@ -511,6 +537,7 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		{
 			PerformExport();
 		}
+
 		/// <summary>
 		/// OnExit
 		/// </summary>
@@ -559,28 +586,24 @@ namespace GrapeCity.ActiveReports.Designer.Win
 			fileMenu.DropDownItems.Clear();
 			fileMenu.DropDownItems.Add(new ToolStripMenuItem(Resources.New, Resources.CmdNewReport, OnNew, Keys.Control | Keys.N));
 			fileMenu.DropDownItems.Add(new ToolStripMenuItem(Resources.Open, Resources.CmdOpen, OnOpen, Keys.Control | Keys.O));
-
 			fileMenu.DropDownItems.Add(new ToolStripSeparator());
 			fileMenu.DropDownItems.Add(new ToolStripMenuItem(Resources.Save, Resources.CmdSave, OnSave, Keys.Control | Keys.S));
 			fileMenu.DropDownItems.Add(new ToolStripMenuItem(Resources.SaveAs, Resources.CmdSaveAs, OnSaveAs));
-
 			fileMenu.DropDownItems.Add(new ToolStripSeparator());
 			fileMenu.DropDownItems.Add(_exportMenuItem);
 			fileMenu.DropDownItems.Add(new ToolStripSeparator());
 			fileMenu.DropDownItems.Add(new ToolStripMenuItem(Resources.Exit, null, OnExit));
 
-			_exportMenuItem.Enabled = arDesigner.ActiveTab == DesignerTab.Preview;
+			_exportMenuItem.Enabled = IsEnabledExportButton();
 		}
 
 		private ToolStrip CreateReportToolbar()
 		{
-
 			return new ToolStrip(new[]
 			                     	{
 			                     		CreateToolStripButton(Resources.New, Resources.CmdNewReport, OnNew, Resources.NewToolTip),
 			                     		CreateToolStripButton(Resources.Open, Resources.CmdOpen, OnOpen, Resources.OpenToolTip),
 			                     		CreateToolStripButton(Resources.Save, Resources.CmdSave, OnSave, Resources.SaveToolTip),
-
 			                     	})
 			{
 				AccessibleName = "toolStripFile"
@@ -605,8 +628,13 @@ namespace GrapeCity.ActiveReports.Designer.Win
 		private void SetReportName(string reportName)
 		{
 			_reportType = arDesigner.ReportType;
-			_reportName = string.IsNullOrEmpty(reportName) ? Resources.DefaultReportNameRdlx : reportName;
-			Text = Resources.SampleNameTitle + Path.GetFileName(_reportName) + (arDesigner.IsDirty ? Resources.DirtySign : string.Empty);
+			_reportName = reportName;
+			Text = string.Format(Resources.TitleFormat,
+			                     string.IsNullOrEmpty(reportName)
+									? GetDefaultReportName(_reportType)
+			                     	: Path.GetFileName(reportName),
+			                     IsDirty ? Resources.DirtySign : string.Empty,
+			                     Resources.DesignerFormTitle);
 		}
 
 		private bool IsDirty
@@ -623,6 +651,8 @@ namespace GrapeCity.ActiveReports.Designer.Win
 				case DesignerReportType.Rdl:
 					return GetIsMaster() ? Resources.DefaultReportNameRdlxMaster : Resources.DefaultReportNameRdl;
 				case DesignerReportType.Page:
+				case DesignerReportType.RdlMultiSection:
+				case DesignerReportType.RdlDashboard:
 					return Resources.DefaultReportNameRdlx;
 			}
 

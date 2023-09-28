@@ -165,14 +165,8 @@
   <data name="SaveRdlxFilter" xml:space="preserve">
     <value>Page Report Files (*.rdlx)|*.rdlx</value>
   </data>
-  <data name="SaveDashboardFilter" xml:space="preserve">
-    <value>RDL Dashboard Report Files (*.rdlx)|*.rdlx</value>
-  </data>
   <data name="SaveRdlFilter" xml:space="preserve">
     <value>RDL Report Files (*.rdlx)|*.rdlx</value>
-  </data>
-  <data name="SaveRdlxMultiSectionFilter" xml:space="preserve">
-    <value>RDL Multi-Section Report Files (*.rdlx)|*.rdlx</value>
   </data>
   <data name="TitleFormat" xml:space="preserve">
     <value>{0}{1} - {2}</value>
@@ -210,6 +204,25 @@
   <data name="SaveToolTip" xml:space="preserve">
     <value>Save</value>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="App" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\App.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdExport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Export.gif;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdNewReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CmdNewReport.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CmdOpen.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CmdSave.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CmdSaveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CmdSaveAs.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="About" xml:space="preserve">
     <value>&amp;About</value>
   </data>
@@ -222,6 +235,12 @@
   <data name="DefaultReportNameRdl" xml:space="preserve">
     <value>Untitled.rdlx</value>
   </data>
+  <data name="GroupEditorHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GroupEditorHide.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GroupEditorShow" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\GroupEditorShow.png;System.Drawing.Bitmap, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="HideGroupPanelToolTip" xml:space="preserve">
     <value>Hide Group Editor</value>
   </data>
@@ -231,35 +250,10 @@
   <data name="OpenAsLibrary" xml:space="preserve">
     <value>Open As Library</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="App" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\app.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="SaveRdlDashboardFilter" xml:space="preserve">
+    <value>RDL Dashboard Report Files (*.rdlx)|*.rdlx</value>
   </data>
-  <data name="CmdExport" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\export.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CmdNewReport" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cmdnewreport.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CmdOpen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cmdopen.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CmdSave" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cmdsave.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CmdSaveAs" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\cmdsaveas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ExportText" xml:space="preserve">
-    <value>&amp;Export</value>
-  </data>
-  <data name="GroupEditorHide" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\groupeditorhide.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="GroupEditorShow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\resources\groupeditorshow.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="SampleNameTitle" xml:space="preserve">
-    <value>EndUserDesigner - </value>
+  <data name="SaveRdlMultiSectionFilter" xml:space="preserve">
+    <value>RDL MultiSection Report Files (*.rdlx)|*.rdlx</value>
   </data>
 </root>
